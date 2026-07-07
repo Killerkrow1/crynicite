@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "down": "crynicite:block/cinicite_block_bottom",
+    "up": "crynicite:block/cinicite_block_top",
+    "north": "crynicite:block/cinicite_block_side",
+    "east": "crynicite:block/cinicite_block_side",
+    "south": "crynicite:block/cinicite_block_side",
+    "west": "crynicite:block/cinicite_block_side",
+    "particle": "crynicite:block/cinicite_block_side"
+  },
+  "render_type": "solid"
+}

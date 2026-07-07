@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "crynicite:cinicite_crystal"
+    },
+    "R": {
+      "item": "crynicite:cryseum_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "Y": {
+      "item": "crynicite:crynicite_ingot"
+    }
+  },
+  "pattern": [
+    " CR",
+    " CY",
+    " S "
+  ],
+  "result": {
+    "item": "crynicite:crynicite_cleaversword"
+  },
+  "show_notification": true
+}

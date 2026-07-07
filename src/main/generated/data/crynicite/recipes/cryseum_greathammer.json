@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "crynicite:cryseum_block"
+    },
+    "I": {
+      "item": "crynicite:cryseum_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "BIB",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "crynicite:cryseum_greathammer"
+  },
+  "show_notification": true
+}

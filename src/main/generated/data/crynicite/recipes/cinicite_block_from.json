@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "crynicite:cinicite_crystal"
+    },
+    {
+      "item": "crynicite:cinicite_crystal"
+    },
+    {
+      "item": "crynicite:cinicite_crystal"
+    },
+    {
+      "item": "crynicite:cinicite_crystal"
+    },
+    {
+      "item": "crynicite:cinicite_crystal"
+    },
+    {
+      "item": "crynicite:cinicite_crystal"
+    },
+    {
+      "item": "crynicite:cinicite_crystal"
+    },
+    {
+      "item": "crynicite:cinicite_crystal"
+    },
+    {
+      "item": "crynicite:cinicite_crystal"
+    }
+  ],
+  "result": {
+    "item": "crynicite:cinicite_block"
+  }
+}

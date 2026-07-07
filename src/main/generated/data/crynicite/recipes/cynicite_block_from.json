@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "crynicite:crynicite_ingot"
+    }
+  },
+  "pattern": [
+    "GG ",
+    "GG ",
+    "   "
+  ],
+  "result": {
+    "item": "crynicite:cynicite_block"
+  },
+  "show_notification": true
+}

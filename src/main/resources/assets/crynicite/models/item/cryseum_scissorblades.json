@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "crynicite:item/scissorblades_gold_inventory"
+  }
+}

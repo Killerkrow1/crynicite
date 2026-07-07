@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "N": {
+      "item": "minecraft:amethyst_shard"
+    }
+  },
+  "pattern": [
+    " G ",
+    "GNG",
+    " G "
+  ],
+  "result": {
+    "count": 2,
+    "item": "crynicite:cinicite_crystal"
+  },
+  "show_notification": true
+}

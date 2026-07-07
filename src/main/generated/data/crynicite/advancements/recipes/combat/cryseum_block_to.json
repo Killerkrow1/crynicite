@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cryseum_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crynicite:cryseum_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crynicite:cryseum_block_to"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_cryseum_block",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "crynicite:cryseum_block_to"
+    ]
+  },
+  "sends_telemetry_event": false
+}

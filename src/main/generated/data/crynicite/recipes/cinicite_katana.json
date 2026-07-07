@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "crynicite:cinicite_crystal"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "  C",
+    " C ",
+    "S  "
+  ],
+  "result": {
+    "item": "crynicite:cinicite_katana"
+  },
+  "show_notification": true
+}

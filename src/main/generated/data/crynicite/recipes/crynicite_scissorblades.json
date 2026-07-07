@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "crynicite:cryseum_ingot"
+    },
+    "C": {
+      "item": "crynicite:crynicite_ingot"
+    },
+    "I": {
+      "item": "crynicite:cinicite_crystal"
+    }
+  },
+  "pattern": [
+    "I B",
+    " C ",
+    "B I"
+  ],
+  "result": {
+    "item": "crynicite:crynicite_scissorblades"
+  },
+  "show_notification": true
+}

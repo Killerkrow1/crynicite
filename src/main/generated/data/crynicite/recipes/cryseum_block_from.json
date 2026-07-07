@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "crynicite:cryseum_ingot"
+    }
+  },
+  "pattern": [
+    "GG ",
+    "GG ",
+    "   "
+  ],
+  "result": {
+    "item": "crynicite:cryseum_block"
+  },
+  "show_notification": true
+}

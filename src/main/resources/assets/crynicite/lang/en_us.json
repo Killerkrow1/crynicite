@@ -1,0 +1,24 @@
+{
+  "itemgroup.crynicite": "Crynicite Tab",
+  "message.crynicite.crynicite_scissorblades": "!WARNING! Do not use this item or any of it's other items while in the first hotbar slot, it will cause a glitch and you will lose your item!",
+  "item.crynicite.cryseum_ingot": "Cryseum Ingot",
+  "item.crynicite.cinicite_crystal": "Cinicite Crystal",
+  "item.crynicite.crynicite_ingot": "Crynicite Ingot",
+
+  "item.crynicite.cryseum_greathammer": "Cryseum Greathammer",
+  "item.crynicite.cinicite_katana": "Cinicite Katana",
+  "item.crynicite.crynicite_cleaversword": "Crynicite Cleaversword",
+  "item.crynicite.crynicite_scissorblades": "Crynicite Scissorblades",
+  "item.crynicite.cryseum_scissorblades": "Cryseum Scissorblade",
+  "item.crynicite.cinicite_scissorblades": "Cinicite Scissorblade",
+
+  "block.crynicite.cryseum_block": "Cryseum Ingot",
+  "block.crynicite.cinicite_block": "Cinicite Block",
+  "block.crynicite.cynicite_block": "Cynicite Block",
+  "tooltip.crynicite.scissorblades.tooltip": "The conjoined power of Cryseum and Cinicite.",
+  "tooltip.crynicite.rightscissor.tooltip": "The power of Cinicite in your hands.",
+  "tooltip.crynicite.leftscissor.tooltip": "The power of Cryseum in your hands.",
+  "tooltip.crynicite.katana.tooltip": "A sword enhanced by the power of Cinicite to grant more range.",
+  "tooltip.crynicite.greathammer.tooltip": "The shocking force of Cryseum harnessed into one hammer.",
+  "tooltip.crynicite.cleaversword.tooltip": "The force of Crynicite runs well through this."
+}

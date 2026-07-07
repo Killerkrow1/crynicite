@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "pattern": [
+    " G ",
+    "GNG",
+    " G "
+  ],
+  "result": {
+    "count": 2,
+    "item": "crynicite:cryseum_ingot"
+  },
+  "show_notification": true
+}

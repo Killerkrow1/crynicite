@@ -3,15 +3,15 @@
 	"id": "crynicite",
 	"version": "${version}",
 	"name": "Crynicite",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Mod adding three new materials, and six new weapons!",
 	"authors": [
-		"Me!"
+		"Killerkrow - Dev, Aurum Sanctum - Artist"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://kkrow.carrd.co/#mods",
+		"sources": "https://github.com/Killerkrow1/crynicite"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/crynicite/icon.png",
 	"environment": "*",
 	"entrypoints": {

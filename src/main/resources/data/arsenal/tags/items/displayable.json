@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "crynicite:cryseum_greathammer",
+    "crynicite:cinicite_katana",
+    "crynicite:crynicite_cleaversword",
+    "crynicite:crynicite_scissorblades",
+    "crynicite:cryseum_scissorblades",
+    "crynicite:cinicite_scissorblades"
+  ]
+}

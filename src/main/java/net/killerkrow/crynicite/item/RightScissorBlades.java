@@ -51,7 +51,9 @@ public class RightScissorBlades extends SwordItem implements Vanishable {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack mainHand = user.getStackInHand(hand);
+        ItemStack mainHand2 = user.getStackInHand(hand);
         ItemStack offHand = user.getStackInHand(Hand.OFF_HAND);
+        ItemStack offHand2 = user.getStackInHand(Hand.OFF_HAND);
 
         // HOLD THE RIGHT STUFF, AND DON'T SNEAK
         if (offHand.isOf(ModItems.CRYSEUM_SCISSORBLADES) && !user.isSneaking()) {
@@ -62,8 +64,8 @@ public class RightScissorBlades extends SwordItem implements Vanishable {
             NbtList mainEnchants = mainHand.getEnchantments();
             NbtList offEnchants = offHand.getEnchantments();
 
-            fusedNbt.put("MainHandEnchants", mainEnchants);
-            fusedNbt.put("OffHandEnchants", offEnchants);
+            fusedNbt.put("MainHandEnchants", offEnchants);
+            fusedNbt.put("OffHandEnchants", mainEnchants);
             fusedItem.setNbt(fusedNbt);
 
             // Here take new item

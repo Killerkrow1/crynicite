@@ -8,7 +8,9 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
@@ -40,6 +42,15 @@ public class GreatHammer extends SwordItem implements Vanishable {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        if (target.isBlocking()) {
+            if (attacker instanceof PlayerEntity player) {
+                target.disablesShield();
+
+                target.getWorld().playSound(null, target.getX(), target.getY(), target.getZ(),
+                        SoundEvents.ITEM_SHIELD_BREAK, attacker.getSoundCategory(), 1.0F, 0.8F);
+            }
+        }
+
         double dx = attacker.getX() - target.getX();
         double dz = attacker.getZ() - target.getZ();
 

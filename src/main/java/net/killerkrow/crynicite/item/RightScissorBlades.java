@@ -5,6 +5,7 @@ import com.google.common.collect.Multimap;
 import net.killerkrow.crynicite.init.ModItems;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -65,11 +66,20 @@ public class RightScissorBlades extends SwordItem implements Vanishable {
             fusedNbt.put("OffHandEnchants", offEnchants);
             fusedItem.setNbt(fusedNbt);
 
+            // Here take new item
+            mainHand.decrement(1);
+            offHand.decrement(1);
             if (!world.isClient) {
-                // Here take new item
-                mainHand.decrement(1);
-                offHand.decrement(1);
-                user.getInventory().insertStack(fusedItem);
+                ItemEntity itemEntity = new ItemEntity(
+                        world,
+                        user.getX(),
+                        user.getY() + 1.0,
+                        user.getZ(),
+                        fusedItem
+                );
+
+                // Spawns the item
+                world.spawnEntity(itemEntity);
 
                 world.playSound(null, user.getX(), user.getY(), user.getZ(),
                         SoundEvents.BLOCK_ANVIL_USE, SoundCategory.PLAYERS, 0.5F, 1.0F);

@@ -5,6 +5,7 @@ import com.google.common.collect.Multimap;
 import net.killerkrow.crynicite.init.ModItems;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -65,12 +66,28 @@ public class ScissorBlades extends SwordItem implements Vanishable {
                 item2.getOrCreateNbt().put("Enchantments", tag.getList("OffHandEnchants", 10));
             }
 
+            heldItem.decrement(1);
             if (!world.isClient) {
-                heldItem.decrement(1);
 
                 // Get torn apart.
-                user.getInventory().insertStack(item1);
-                user.getInventory().insertStack(item2);
+                ItemEntity itemEntity = new ItemEntity(
+                        world,
+                        user.getX(),
+                        user.getY() + 1.0,
+                        user.getZ(),
+                        item1
+                );
+                ItemEntity itemEntity2 = new ItemEntity(
+                        world,
+                        user.getX(),
+                        user.getY() + 1.0,
+                        user.getZ(),
+                        item2
+                );
+
+                // Spawns the items
+                world.spawnEntity(itemEntity);
+                world.spawnEntity(itemEntity2);
 
                 world.playSound(null, user.getX(), user.getY(), user.getZ(),
                         SoundEvents.ITEM_BOTTLE_EMPTY, SoundCategory.PLAYERS, 0.5F, 1.0F);

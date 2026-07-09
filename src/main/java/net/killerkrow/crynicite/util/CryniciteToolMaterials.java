@@ -1,4 +1,4 @@
-package net.killerkrow.util;
+package net.killerkrow.crynicite.util;
 
 import net.fabricmc.yarn.constants.MiningLevels;
 import net.killerkrow.crynicite.init.ModItems;

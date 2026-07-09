@@ -13,7 +13,7 @@ public class ModItemGroups {
     public static final ItemGroup CRYNICITE_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(Crynicite.MOD_ID, "cryseum_ingot"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.crynicite"))
-                    .icon(() -> new ItemStack(ModItems.CRYSEUM_INGOT)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(ModItems.CRYNICITE_INGOT)).entries((displayContext, entries) -> {
 
                         entries.add(ModItems.CRYSEUM_INGOT);
                         entries.add(ModItems.CINICITE_CRYSTAL);

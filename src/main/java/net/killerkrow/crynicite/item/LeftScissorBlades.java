@@ -47,6 +47,11 @@ public class LeftScissorBlades extends SwordItem implements Vanishable {
     }
 
     @Override
+    public boolean isDamageable() {
+        return false;
+    }
+
+    @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack mainHand = user.getStackInHand(hand);
         ItemStack offHand = user.getStackInHand(Hand.OFF_HAND);

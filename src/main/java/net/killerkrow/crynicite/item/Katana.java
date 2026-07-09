@@ -54,7 +54,7 @@ public class Katana extends SwordItem implements Vanishable {
             builder.put(ReachEntityAttributes.ATTACK_RANGE, new EntityAttributeModifier(
                     ATTACK_RANGE_MODIFIER_UUID,
                     "Weapon attack range bonus",
-                    2.0D,
+                    0.75,
                     EntityAttributeModifier.Operation.ADDITION
             ));
             return builder.build();

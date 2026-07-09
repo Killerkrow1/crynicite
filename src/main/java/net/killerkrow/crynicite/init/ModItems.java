@@ -3,7 +3,7 @@ package net.killerkrow.crynicite.init;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.killerkrow.crynicite.Crynicite;
 import net.killerkrow.crynicite.item.*;
-import net.killerkrow.util.CryniciteToolMaterials;
+import net.killerkrow.crynicite.util.CryniciteToolMaterials;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -18,16 +18,16 @@ public class ModItems {
             new Item(new FabricItemSettings()));
 
     public static final Item CRYSEUM_GREATHAMMER = registerItem("cryseum_greathammer",
-            new GreatHammer(CryniciteToolMaterials.CRYSEUM, 9, -3.2f, new FabricItemSettings()));
+            new GreatHammer(CryniciteToolMaterials.CRYSEUM, 7, -3.4f, new FabricItemSettings()));
     public static final Item CINICITE_KATANA = registerItem("cinicite_katana",
-            new Katana(CryniciteToolMaterials.CINICITE, 4, -2.2f, new FabricItemSettings()));
+            new Katana(CryniciteToolMaterials.CINICITE, 3, -2.2f, new FabricItemSettings()));
     public static final Item CRYNICITE_CLEAVERSWORD = registerItem("crynicite_cleaversword",
-            new CleaverSword(CryniciteToolMaterials.CRYNICITE, 9, -3.0f, new FabricItemSettings()));
+            new CleaverSword(CryniciteToolMaterials.CRYNICITE, 7, -3.0f, new FabricItemSettings()));
 
     public static final Item CRYNICITE_SCISSORBLADES = registerItem("crynicite_scissorblades",
             new ScissorBlades(CryniciteToolMaterials.CRYNICITE, 8, -3.1f, new FabricItemSettings()));
     public static final Item CRYSEUM_SCISSORBLADES = registerItem("cryseum_scissorblades",
-            new LeftScissorBlades(CryniciteToolMaterials.CRYSEUM, 6, -3.0f, new FabricItemSettings()));
+            new LeftScissorBlades(CryniciteToolMaterials.CRYSEUM, 5, -3.0f, new FabricItemSettings()));
     public static final Item CINICITE_SCISSORBLADES = registerItem("cinicite_scissorblades",
             new RightScissorBlades(CryniciteToolMaterials.CINICITE, 5, -2.8f, new FabricItemSettings()));
 

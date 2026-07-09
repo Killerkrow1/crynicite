@@ -65,7 +65,12 @@ public class ScissorBlades extends SwordItem implements Vanishable {
 
     @Override
     public int getEnchantability() {
-        return 0; // Disables enchanting
+        return 0;
+    }
+
+    @Override
+    public boolean isDamageable() {
+        return false;
     }
 
     @Override

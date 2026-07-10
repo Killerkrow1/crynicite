@@ -2,6 +2,8 @@ package net.killerkrow.crynicite.item;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EquipmentSlot;
@@ -10,6 +12,8 @@ import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.*;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
@@ -17,7 +21,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class CleaverSword extends SwordItem implements Vanishable {
+public class CleaverSword extends AxeItem implements Vanishable {
     private final float attackDamage;
     private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
@@ -66,6 +70,15 @@ public class CleaverSword extends SwordItem implements Vanishable {
             });
         }
     }
+
+    @Override
+    public float getMiningSpeedMultiplier(net.minecraft.item.ItemStack stack, BlockState state) {
+        if (state.isIn(BlockTags.AXE_MINEABLE)) {
+            return -8.0F;
+        }
+        return super.getMiningSpeedMultiplier(stack, state);
+    }
+
 
     // tooltip
     @Override

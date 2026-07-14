@@ -33,10 +33,10 @@ public class CleaverSword extends AxeItem implements Vanishable {
         ItemStack leggings = target.getEquippedStack(EquipmentSlot.LEGS);
         ItemStack boots = target.getEquippedStack(EquipmentSlot.FEET);
 
-        damageArmor(target, helmet, 2);
-        damageArmor(target, chestplate, 2);
-        damageArmor(target, leggings, 2);
-        damageArmor(target, boots, 2);
+        damageArmor(target, helmet);
+        damageArmor(target, chestplate);
+        damageArmor(target, leggings);
+        damageArmor(target, boots);
 
         double dx = attacker.getX() - target.getX();
         double dz = attacker.getZ() - target.getZ();
@@ -46,9 +46,9 @@ public class CleaverSword extends AxeItem implements Vanishable {
         return super.postHit(stack, target, attacker);
     }
 
-    private void damageArmor(LivingEntity target, ItemStack armorStack, int amount) {
+    private void damageArmor(LivingEntity target, ItemStack armorStack) {
         if (!armorStack.isEmpty()) {
-            armorStack.damage(amount, target, (entity) -> {
+            armorStack.damage(2, target, (entity) -> {
                 entity.sendEquipmentBreakStatus(EquipmentSlot.HEAD);
             });
         }

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:gunpowder"
+    },
+    "C": {
+      "item": "crynicite:pyrite_chunk"
+    },
+    "H": {
+      "item": "minecraft:coal"
+    }
+  },
+  "pattern": [
+    "BHB",
+    "HCH",
+    "BHB"
+  ],
+  "result": {
+    "item": "crynicite:pyrite_smoke_bomb"
+  },
+  "show_notification": true
+}

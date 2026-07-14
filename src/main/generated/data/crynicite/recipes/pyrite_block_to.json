@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crynicite:raw_pyrite"
+    },
+    {
+      "item": "crynicite:raw_pyrite"
+    },
+    {
+      "item": "crynicite:raw_pyrite"
+    },
+    {
+      "item": "crynicite:raw_pyrite"
+    },
+    {
+      "item": "crynicite:raw_pyrite"
+    },
+    {
+      "item": "crynicite:raw_pyrite"
+    },
+    {
+      "item": "crynicite:raw_pyrite"
+    },
+    {
+      "item": "crynicite:raw_pyrite"
+    },
+    {
+      "item": "crynicite:raw_pyrite"
+    }
+  ],
+  "result": {
+    "item": "crynicite:pyrite_block"
+  }
+}

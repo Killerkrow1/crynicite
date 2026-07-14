@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "group": "deepslate_pyrite_blasting",
+  "ingredient": {
+    "item": "crynicite:deepslate_pyrite_ore"
+  },
+  "result": "crynicite:raw_pyrite"
+}

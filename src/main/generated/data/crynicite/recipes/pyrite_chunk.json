@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "crynicite:raw_pyrite"
+    }
+  },
+  "pattern": [
+    "CC ",
+    "CC ",
+    "   "
+  ],
+  "result": {
+    "item": "crynicite:pyrite_chunk"
+  },
+  "show_notification": true
+}

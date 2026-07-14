@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "nether_pyrite_smelting",
+  "ingredient": {
+    "item": "crynicite:nether_pyrite_ore"
+  },
+  "result": "crynicite:raw_pyrite"
+}

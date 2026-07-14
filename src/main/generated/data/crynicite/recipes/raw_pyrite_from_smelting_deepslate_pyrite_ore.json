@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "deepslate_pyrite_smelting",
+  "ingredient": {
+    "item": "crynicite:deepslate_pyrite_ore"
+  },
+  "result": "crynicite:raw_pyrite"
+}

@@ -1,4 +1,7 @@
-// 1.20.1	2026-07-07T17:52:36.6972248	Crynicite/Block Loot Tables
+// 1.20.1	2026-07-14T13:58:32.314807	Crynicite/Block Loot Tables
 0935cee5f0b97f87040e5e1c3fab939fdcd39365 data\crynicite\loot_tables\blocks\cynicite_block.json
-6ec2815d1f197465c840858e14dedb62e74bb739 data\crynicite\loot_tables\blocks\cryseum_block.json
+b09c52449104b4f87e256ca546ebbb4b916d695e data\crynicite\loot_tables\blocks\deepslate_pyrite_ore.json
 224ce2cc9ace285db35760f3eba120e1e5681d8a data\crynicite\loot_tables\blocks\cinicite_block.json
+6ec2815d1f197465c840858e14dedb62e74bb739 data\crynicite\loot_tables\blocks\cryseum_block.json
+70ba257568246f40515d76639892ba47f17e86c4 data\crynicite\loot_tables\blocks\pyrite_ore.json
+55755074d90cd6e66c30c7da475c98e9f91764a0 data\crynicite\loot_tables\blocks\nether_pyrite_ore.json

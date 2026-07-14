@@ -18,6 +18,9 @@
 		"main": [
 			"net.killerkrow.crynicite.Crynicite"
 		],
+		"client": [
+			"net.killerkrow.crynicite.CryniciteClient"
+		],
 		"fabric-datagen": [
 			"net.killerkrow.crynicite.CryniciteDataGenerator"
 		]

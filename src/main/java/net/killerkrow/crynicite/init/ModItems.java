@@ -17,6 +17,17 @@ public class ModItems {
     public static final Item CRYNICITE_INGOT = registerItem("crynicite_ingot",
             new Item(new FabricItemSettings()));
 
+    public static final Item PYRITE_CHUNK = registerItem("pyrite_chunk",
+            new PyriteChunk(new FabricItemSettings()));
+    public static final Item PYRITE_AND_STEEL = registerItem("pyrite_and_steel",
+            new PyriteSteel(new FabricItemSettings()));
+    public static final Item PYRITE_SMOKE_BOMB = registerItem("pyrite_smoke_bomb",
+            new PyriteSmokeBomb(new FabricItemSettings().maxCount(16)));
+    public static final Item PYRITE_INGOT = registerItem("pyrite_ingot",
+            new Item(new FabricItemSettings()));
+    public static final Item RAW_PYRITE = registerItem("raw_pyrite",
+            new Item(new FabricItemSettings()));
+
     public static final Item CRYSEUM_GREATHAMMER = registerItem("cryseum_greathammer",
             new GreatHammer(CryniciteToolMaterials.CRYSEUM, 7, -3.4f, new FabricItemSettings()));
     public static final Item CINICITE_KATANA = registerItem("cinicite_katana",

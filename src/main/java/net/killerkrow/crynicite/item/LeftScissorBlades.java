@@ -1,14 +1,10 @@
 package net.killerkrow.crynicite.item;
 
-import com.google.common.collect.ImmutableMultimap;
-import com.google.common.collect.Multimap;
 import net.killerkrow.crynicite.init.ModItems;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.ItemEntity;
-import net.minecraft.entity.attribute.EntityAttribute;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
-import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.nbt.NbtCompound;
@@ -25,30 +21,22 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class LeftScissorBlades extends SwordItem implements Vanishable {
-    private final float attackDamage;
-    private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
     public LeftScissorBlades(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Item.Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
-        this.attackDamage = (float) attackDamage + toolMaterial.getAttackDamage();
-        ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
-        builder.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Weapon modifier", (double) this.attackDamage, EntityAttributeModifier.Operation.ADDITION));
-        builder.put(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(ATTACK_SPEED_MODIFIER_ID, "Weapon modifier", (double) attackSpeed, EntityAttributeModifier.Operation.ADDITION));
-        this.attributeModifiers = builder.build();
     }
 
-    public float getAttackDamage() {
-        return this.attackDamage;
+    @Override
+    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
+        if (!world.isClient()) {
+            NbtCompound nbt = stack.getOrCreateNbt();
+            nbt.putBoolean("Unbreakable", true);
+        }
     }
 
     @Override
     public ItemStack getRecipeRemainder(ItemStack stack) {
         return new ItemStack(this);
-    }
-
-    @Override
-    public boolean isDamageable() {
-        return false;
     }
 
     @Override

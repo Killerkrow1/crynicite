@@ -8,14 +8,15 @@ import net.killerkrow.crynicite.init.ModItems;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
 
+import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
-
     public ModRecipeProvider(FabricDataOutput output) {
         super(output);
     }
@@ -92,26 +93,80 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "crynicite_scissorblades"));
 
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.CRYNICITE_INGOT)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CRYNICITE_INGOT)
                 .input(ModItems.CINICITE_CRYSTAL, 4)
                 .input(ModItems.CRYSEUM_INGOT, 4)
                 .criterion(hasItem(ModItems.CRYSEUM_INGOT), conditionsFromItem(ModItems.CRYSEUM_INGOT))
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "crynicite_ingot"));
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.CRYSEUM_INGOT,4)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CRYSEUM_INGOT,4)
                 .input(ModBlocks.CRYSEUM_BLOCK)
                 .criterion(hasItem(ModBlocks.CRYSEUM_BLOCK), conditionsFromItem(ModBlocks.CRYSEUM_BLOCK))
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "cryseum_block_to"));
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModBlocks.CINICITE_BLOCK)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CINICITE_BLOCK)
                 .input(ModItems.CINICITE_CRYSTAL, 9)
                 .criterion(hasItem(ModItems.CINICITE_CRYSTAL), conditionsFromItem(ModItems.CINICITE_CRYSTAL))
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "cinicite_block_from"));
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.CINICITE_CRYSTAL,9)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CINICITE_CRYSTAL,9)
                 .input(ModBlocks.CINICITE_BLOCK)
                 .criterion(hasItem(ModItems.CINICITE_CRYSTAL), conditionsFromItem(ModItems.CINICITE_CRYSTAL))
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "cinicite_block_to"));
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.CRYNICITE_INGOT,4)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CRYNICITE_INGOT,4)
                 .input(ModBlocks.CYNICITE_BLOCK)
                 .criterion(hasItem(ModItems.CRYNICITE_INGOT), conditionsFromItem(ModItems.CRYNICITE_INGOT))
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "crynicite_block_to"));
+
+//        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PYRITE_AND_STEEL)
+//                .input(ModItems.RAW_PYRITE)
+//                .input(Items.IRON_NUGGET)
+//                .criterion(hasItem(ModItems.RAW_PYRITE), conditionsFromItem(ModItems.RAW_PYRITE))
+//                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "pyrite_and_steel"));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.PYRITE_BLOCK)
+                .input(ModItems.RAW_PYRITE, 9)
+                .criterion(hasItem(ModItems.RAW_PYRITE), conditionsFromItem(ModItems.RAW_PYRITE))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "pyrite_block_to"));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RAW_PYRITE, 9)
+                .input(ModBlocks.PYRITE_BLOCK)
+                .criterion(hasItem(ModBlocks.PYRITE_BLOCK), conditionsFromItem(ModBlocks.PYRITE_BLOCK))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "pyrite_block_from"));
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PYRITE_CHUNK, 1)
+                .pattern("CC ")
+                .pattern("CC ")
+                .pattern("   ")
+                .input('C',ModItems.RAW_PYRITE)
+                .criterion(hasItem(ModItems.RAW_PYRITE), conditionsFromItem(ModItems.RAW_PYRITE))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "pyrite_chunk"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PYRITE_SMOKE_BOMB, 1)
+                .pattern("BHB")
+                .pattern("HCH")
+                .pattern("BHB")
+                .input('C',ModItems.PYRITE_CHUNK)
+                .input('H',Items.COAL)
+                .input('B',Items.GUNPOWDER)
+                .criterion(hasItem(ModItems.PYRITE_CHUNK), conditionsFromItem(ModItems.PYRITE_CHUNK))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "pyrite_smoke_bomb"));
+
+
+        ItemConvertible cookedPyriteItem = ModItems.RAW_PYRITE;
+        ItemConvertible overworld = ModBlocks.PYRITE_ORE;
+        ItemConvertible deepslate = ModBlocks.DEEPSLATE_PYRITE_ORE;
+        ItemConvertible nether = ModBlocks.NETHER_PYRITE_ORE;
+
+        // Smelting
+        offerSmelting(exporter, List.of(overworld), RecipeCategory.MISC, cookedPyriteItem, 1f,
+                200, "normal_pyrite_smelting");
+        offerSmelting(exporter, List.of(deepslate), RecipeCategory.MISC, cookedPyriteItem, 1f,
+                200, "deepslate_pyrite_smelting");
+        offerSmelting(exporter, List.of(nether), RecipeCategory.MISC, cookedPyriteItem, 1f,
+                200, "nether_pyrite_smelting");
+
+        // Blasting
+        offerBlasting(exporter, List.of(overworld), RecipeCategory.MISC, cookedPyriteItem, 1f,
+                100, "normal_pyrite_blasting");
+        offerBlasting(exporter, List.of(deepslate), RecipeCategory.MISC, cookedPyriteItem, 1f,
+                100, "deepslate_pyrite_blasting");
+        offerBlasting(exporter, List.of(nether), RecipeCategory.MISC, cookedPyriteItem, 1f,
+                100,  "nether_pyrite_blasting");
     }
 }

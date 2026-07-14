@@ -1,14 +1,10 @@
 package net.killerkrow.crynicite.item;
 
-import com.google.common.collect.ImmutableMultimap;
-import com.google.common.collect.Multimap;
 import net.killerkrow.crynicite.init.ModItems;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.ItemEntity;
-import net.minecraft.entity.attribute.EntityAttribute;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
-import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.*;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtList;
@@ -27,20 +23,17 @@ import net.minecraft.util.TypedActionResult;
 import java.util.List;
 
 public class RightScissorBlades extends SwordItem implements Vanishable {
-    private final float attackDamage;
-    private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
     public RightScissorBlades(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Item.Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
-        this.attackDamage = (float) attackDamage + toolMaterial.getAttackDamage();
-        ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
-        builder.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Weapon modifier", (double) this.attackDamage, EntityAttributeModifier.Operation.ADDITION));
-        builder.put(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(ATTACK_SPEED_MODIFIER_ID, "Weapon modifier", (double) attackSpeed, EntityAttributeModifier.Operation.ADDITION));
-        this.attributeModifiers = builder.build();
     }
 
-    public float getAttackDamage() {
-        return this.attackDamage;
+    @Override
+    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
+        if (!world.isClient()) {
+            NbtCompound nbt = stack.getOrCreateNbt();
+            nbt.putBoolean("Unbreakable", true);
+        }
     }
 
     @Override
@@ -49,16 +42,9 @@ public class RightScissorBlades extends SwordItem implements Vanishable {
     }
 
     @Override
-    public boolean isDamageable() {
-        return false;
-    }
-
-    @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack mainHand = user.getStackInHand(hand);
-        ItemStack mainHand2 = user.getStackInHand(hand);
         ItemStack offHand = user.getStackInHand(Hand.OFF_HAND);
-        ItemStack offHand2 = user.getStackInHand(Hand.OFF_HAND);
 
         // HOLD THE RIGHT STUFF, AND DON'T SNEAK
         if (offHand.isOf(ModItems.CRYSEUM_SCISSORBLADES) && !user.isSneaking()) {

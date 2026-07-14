@@ -30,6 +30,15 @@ public class ModItemGroups {
                         entries.add(ModBlocks.CINICITE_BLOCK);
                         entries.add(ModBlocks.CYNICITE_BLOCK);
 
+                        entries.add(ModBlocks.PYRITE_ORE);
+                        entries.add(ModBlocks.DEEPSLATE_PYRITE_ORE);
+                        entries.add(ModBlocks.NETHER_PYRITE_ORE);
+                        entries.add(ModBlocks.PYRITE_BLOCK);
+                        entries.add(ModItems.RAW_PYRITE);
+                        entries.add(ModItems.PYRITE_CHUNK);
+                        entries.add(ModItems.PYRITE_INGOT);
+                        entries.add(ModItems.PYRITE_SMOKE_BOMB);
+
                     }).build());
 
     public static void registerItemGroups() {

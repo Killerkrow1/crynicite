@@ -9,11 +9,11 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum CryniciteToolMaterials implements ToolMaterial {
-            CRYSEUM(MiningLevels.NETHERITE, 1561, 9.0F, 4.0F, 15,
+            CRYSEUM(MiningLevels.NETHERITE, 2031, 9.0F, 4.0F, 15,
                     () -> Ingredient.ofItems(ModItems.CRYSEUM_INGOT)),
             CINICITE(MiningLevels.DIAMOND, 1561, 8.0F, 3.0F, 10,
                     () -> Ingredient.ofItems(ModItems.CINICITE_CRYSTAL)),
-            CRYNICITE(MiningLevels.DIAMOND, 2031, 8.0F, 3.0F, 10,
+            CRYNICITE(MiningLevels.DIAMOND, 1561, 8.0F, 3.0F, 10,
                     () -> Ingredient.ofItems(ModItems.CRYNICITE_INGOT));
 
     private final int miningLevel;

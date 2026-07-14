@@ -12,13 +12,30 @@
   "item.crynicite.cryseum_scissorblades": "Cryseum Scissorblade",
   "item.crynicite.cinicite_scissorblades": "Cinicite Scissorblade",
 
+  "item.crynicite.pyrite_chunk": "Pyrite Chunk",
+  "item.crynicite.pyrite_and_steel": "Pyrite and Steel",
+  "item.crynicite.pyrite_smoke_bomb": "Pyrite Smoke Bomb",
+  "item.crynicite.pyrite_ore": "Pyrite Ore",
+  "item.crynicite.pyrite_ingot": "Pyrite Ingot",
+  "item.crynicite.raw_pyrite": "Raw Pyrite",
+
+  "block.crynicite.explode_me": "PLEASE EXPLODE ME, I EXIST TO EXPLODE",
+  "block.crynicite.pyrite_fire": "Pyrite Fire",
+  "block.crynicite.pyrite_ore": "Pyrite Ore",
+  "block.crynicite.deepslate_pyrite_ore": "Deepslate Pyrite Ore",
+  "block.crynicite.nether_pyrite_ore": "Netherrack Pyrite Ore",
+  "block.crynicite.pyrite_block": "Pyrite Block",
+
   "block.crynicite.cryseum_block": "Cryseum Block",
   "block.crynicite.cinicite_block": "Cinicite Block",
   "block.crynicite.cynicite_block": "Cynicite Block",
+  "block.crynicite.end_portal_frame": "End Portal Frame",
   "tooltip.crynicite.scissorblades.tooltip": "The conjoined power of Cryseum and Cinicite.",
   "tooltip.crynicite.rightscissor.tooltip": "The power of Cinicite in your hands.",
   "tooltip.crynicite.leftscissor.tooltip": "The power of Cryseum in your hands.",
   "tooltip.crynicite.katana.tooltip": "A sword enhanced by the power of Cinicite to grant more range.",
   "tooltip.crynicite.greathammer.tooltip": "The shocking force of Cryseum harnessed into one hammer.",
-  "tooltip.crynicite.cleaversword.tooltip": "The force of Crynicite runs well through this."
+  "tooltip.crynicite.cleaversword.tooltip": "The force of Crynicite runs well through this.",
+  "tooltip.crynicite.steel.tooltip": "This is a Dev WIP Item, if you somehow have it... get rid of it. This will crash the game bc it is 100% broken.",
+  "tooltip.crynicite.smokebomb": "Thrown down to create a smoke that's explosive when touched!"
 }

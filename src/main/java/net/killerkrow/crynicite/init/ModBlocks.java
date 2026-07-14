@@ -39,7 +39,8 @@ public class ModBlocks {
                     .resistance(0).breakInstantly().burnable().dropsNothing().nonOpaque()));
 
     public static final Block END_PORTAL_FRAME = registerBlock("end_portal_frame",
-            new EnderPortalBlock(FabricBlockSettings.copyOf(Blocks.END_PORTAL).luminance((state) -> 1).hardness(55).requiresTool().nonOpaque().collidable(true)));
+            new EnderPortalBlock(FabricBlockSettings.copyOf(Blocks.END_PORTAL).luminance((state) -> 1)
+                    .hardness(55).nonOpaque().collidable(true)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

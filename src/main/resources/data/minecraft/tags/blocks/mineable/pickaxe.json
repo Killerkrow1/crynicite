@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "crynicite:pyrite_ore",
+    "crynicite:deepslate_pyrite_ore",
+    "crynicite:nether_pyrite_ore",
+    "crynicite:pyrite_block",
+    "crynicite:cryseum_block",
+    "crynicite:cinicite_block",
+    "crynicite:cynicite_block",
+    "crynicite:end_portal_frame"
+  ]
+}

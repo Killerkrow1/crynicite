@@ -51,6 +51,7 @@ public class PyriteSmokeBomb extends Item {
         if (!user.getAbilities().creativeMode) {
             itemStack.decrement(1);
         }
+        user.getItemCooldownManager().set(this, 20); // 1-second cooldown
 
         return TypedActionResult.success(itemStack, world.isClient());
     }

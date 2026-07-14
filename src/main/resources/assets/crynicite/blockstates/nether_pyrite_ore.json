@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "crynicite:block/pyrite_ore"
+      "model": "crynicite:block/nether_pyrite_ore"
     }
   }
 }

@@ -1,8 +1,10 @@
 package net.killerkrow.crynicite;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.killerkrow.crynicite.init.*;
+import net.killerkrow.crynicite.util.PullTaskTracker;
 import net.killerkrow.crynicite.world.gen.ModWorldGeneration;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -24,8 +26,10 @@ public class Crynicite implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModLootTableModifiers.modifyLootTables();
 		ModParticles.registerParticles();
+		ModEnchantments.registerModEnchantments();
 
 		ModWorldGeneration.generateModWorldGen();
+		ServerTickEvents.END_WORLD_TICK.register(PullTaskTracker::tick);
 
 		UseBlockCallback.EVENT.register((player, world, hand, hitResult) -> {
 			var blockState = world.getBlockState(hitResult.getBlockPos());

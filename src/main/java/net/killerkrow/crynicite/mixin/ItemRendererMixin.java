@@ -43,6 +43,14 @@ public abstract class ItemRendererMixin {
             return ((ItemRendererAccessor) this).Crynicite$getModels().getModelManager().getModel(new ModelIdentifier(Crynicite.MOD_ID,
                     "scissorblades_full_held", "inventory"));
         }
+        if (stack.isOf(ModItems.AMETRINE_GLAIVE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).Crynicite$getModels().getModelManager().getModel(new ModelIdentifier(Crynicite.MOD_ID,
+                    "glaive_held", "inventory"));
+        }
+        if (stack.isOf(ModItems.AMETRINE_DUAL_BLADES) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).Crynicite$getModels().getModelManager().getModel(new ModelIdentifier(Crynicite.MOD_ID,
+                    "dual_blades_held", "inventory"));
+        }
 
         return value;
     }

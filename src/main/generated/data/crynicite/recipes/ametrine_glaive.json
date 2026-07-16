@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crynicite:ametrine_crystal"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "  A",
+    " S ",
+    "S  "
+  ],
+  "result": {
+    "item": "crynicite:ametrine_glaive"
+  },
+  "show_notification": true
+}

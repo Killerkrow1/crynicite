@@ -1,5 +1,5 @@
 {
-  "itemgroup.crynicite": "Crynicite Tab",
+  "itemgroup.crynicite": "Aurum's Antics",
   "message.crynicite.crynicite_scissorblades": "!WARNING! Do be careful with this weapon! Make sure you have at least 2 open hotbar slots leftmost before this item or any of it's sub-items!",
   "item.crynicite.cryseum_ingot": "Cryseum Ingot",
   "item.crynicite.cinicite_crystal": "Cinicite Crystal",
@@ -26,6 +26,16 @@
   "block.crynicite.nether_pyrite_ore": "Netherrack Pyrite Ore",
   "block.crynicite.pyrite_block": "Pyrite Block",
 
+
+  "item.crynicite.citrine_crystal": "Citrine Crystal",
+  "item.crynicite.ametrine_crystal": "Ametrine Crystal",
+  "item.crynicite.ametrine_glaive": "Ametrine Glaive",
+  "item.crynicite.ametrine_dual_blades": "Ametrine Dual Blades",
+  "block.crynicite.ametrine_block": "Ametrine Block",
+  "block.crynicite.citrine_block": "Citrine Block",
+  "enchantment.crynicite.chained": "Chained",
+  "enchantment.crynicite.launch": "Launch",
+
   "block.crynicite.cryseum_block": "Cryseum Block",
   "block.crynicite.cinicite_block": "Cinicite Block",
   "block.crynicite.cynicite_block": "Cynicite Block",
@@ -37,5 +47,9 @@
   "tooltip.crynicite.greathammer.tooltip": "The shocking force of Cryseum harnessed into one hammer.",
   "tooltip.crynicite.cleaversword.tooltip": "The force of Crynicite runs well through this.",
   "tooltip.crynicite.steel.tooltip": "This is a Dev WIP Item, if you somehow have it... get rid of it. This will crash the game bc it is 100% broken.",
-  "tooltip.crynicite.smokebomb": "Thrown down to create a smoke that's explosive when touched!"
+  "tooltip.crynicite.smokebomb": "Thrown down to create a smoke that's explosive when touched!",
+  "tooltip.crynicite.glaive.tooltip": "A glaive with a mystical crystal as it's ornament. It has a unique effect.",
+  "tooltip.crynicite.dualblades.tooltip": "Dual Blades constructed to attack and bind.",
+  "tooltip.crynicite.ametrine_crystal.tooltip": "A color that shines and radiates amazingly. A crystal meant as a gift for close friends.",
+  "tooltip.crynicite.ametrine_crystal2.tooltip": "Spiritually this crystal bridges the gap between the Material World and the Divine World."
 }

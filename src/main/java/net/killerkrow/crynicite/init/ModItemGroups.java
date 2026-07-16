@@ -39,6 +39,13 @@ public class ModItemGroups {
                         entries.add(ModItems.PYRITE_INGOT);
                         entries.add(ModItems.PYRITE_SMOKE_BOMB);
 
+                        entries.add(ModBlocks.CITRINE_BLOCK);
+                        entries.add(ModBlocks.AMETRINE_BLOCK);
+                        entries.add(ModItems.CITRINE_CRYSTAL);
+                        entries.add(ModItems.AMETRINE_CRYSTAL);
+                        entries.add(ModItems.AMETRINE_GLAIVE);
+                        entries.add(ModItems.AMETRINE_DUAL_BLADES);
+
                     }).build());
 
     public static void registerItemGroups() {

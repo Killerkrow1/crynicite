@@ -28,6 +28,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CYNICITE_BLOCK);
         addDrop(ModBlocks.END_PORTAL_FRAME);
         addDrop(ModBlocks.PYRITE_BLOCK);
+        addDrop(ModBlocks.CITRINE_BLOCK);
+        addDrop(ModBlocks.AMETRINE_BLOCK);
 
         addDrop(ModBlocks.PYRITE_ORE, copperLikeOreDrops(ModBlocks.PYRITE_ORE, ModItems.RAW_PYRITE));
         addDrop(ModBlocks.DEEPSLATE_PYRITE_ORE, copperLikeOreDrops(ModBlocks.DEEPSLATE_PYRITE_ORE, ModItems.RAW_PYRITE));

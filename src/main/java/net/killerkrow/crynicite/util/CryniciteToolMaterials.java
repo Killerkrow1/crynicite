@@ -14,7 +14,9 @@ public enum CryniciteToolMaterials implements ToolMaterial {
             CINICITE(MiningLevels.DIAMOND, 1561, 8.0F, 3.0F, 10,
                     () -> Ingredient.ofItems(ModItems.CINICITE_CRYSTAL)),
             CRYNICITE(MiningLevels.DIAMOND, 1561, 8.0F, 3.0F, 10,
-                    () -> Ingredient.ofItems(ModItems.CRYNICITE_INGOT));
+                    () -> Ingredient.ofItems(ModItems.CRYNICITE_INGOT)),
+            AMETRINE(MiningLevels.DIAMOND, 1561, 8.0F, 3.0F, 10,
+                    () -> Ingredient.ofItems(ModItems.AMETRINE_CRYSTAL));
 
     private final int miningLevel;
     private final int itemDurability;

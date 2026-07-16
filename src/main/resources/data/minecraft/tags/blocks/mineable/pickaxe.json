@@ -8,6 +8,8 @@
     "crynicite:cryseum_block",
     "crynicite:cinicite_block",
     "crynicite:cynicite_block",
-    "crynicite:end_portal_frame"
+    "crynicite:end_portal_frame",
+    "crynicite:ametrine_block",
+    "crynicite:citrine_block"
   ]
 }

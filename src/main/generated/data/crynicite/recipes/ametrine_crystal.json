@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "H": {
+      "item": "crynicite:citrine_crystal"
+    }
+  },
+  "pattern": [
+    "BHB",
+    "HBH",
+    "BHB"
+  ],
+  "result": {
+    "count": 2,
+    "item": "crynicite:ametrine_crystal"
+  },
+  "show_notification": true
+}

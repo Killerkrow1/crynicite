@@ -147,6 +147,39 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.PYRITE_CHUNK), conditionsFromItem(ModItems.PYRITE_CHUNK))
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "pyrite_smoke_bomb"));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CITRINE_CRYSTAL, 2)
+                .pattern("BHB")
+                .pattern("HBH")
+                .pattern("BHB")
+                .input('H',Items.GOLD_INGOT)
+                .input('B',Items.QUARTZ)
+                .criterion(hasItem(Items.GOLD_INGOT), conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "citrine_crystal"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.AMETRINE_CRYSTAL, 2)
+                .pattern("BHB")
+                .pattern("HBH")
+                .pattern("BHB")
+                .input('H',ModItems.CITRINE_CRYSTAL)
+                .input('B',Items.AMETHYST_SHARD)
+                .criterion(hasItem(ModItems.CITRINE_CRYSTAL), conditionsFromItem(ModItems.CITRINE_CRYSTAL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "ametrine_crystal"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.AMETRINE_DUAL_BLADES)
+                .pattern("A A")
+                .pattern("A A")
+                .pattern("S S")
+                .input('A',ModItems.AMETRINE_CRYSTAL)
+                .input('S',Items.STICK)
+                .criterion(hasItem(ModItems.AMETRINE_CRYSTAL), conditionsFromItem(ModItems.AMETRINE_CRYSTAL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "ametrine_dual_blades"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.AMETRINE_GLAIVE)
+                .pattern("  A")
+                .pattern(" S ")
+                .pattern("S  ")
+                .input('A',ModItems.AMETRINE_CRYSTAL)
+                .input('S',Items.STICK)
+                .criterion(hasItem(ModItems.AMETRINE_CRYSTAL), conditionsFromItem(ModItems.AMETRINE_CRYSTAL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "ametrine_glaive"));
+
 
         ItemConvertible cookedPyriteItem = ModItems.RAW_PYRITE;
         ItemConvertible overworld = ModBlocks.PYRITE_ORE;

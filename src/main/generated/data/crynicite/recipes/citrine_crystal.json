@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:quartz"
+    },
+    "H": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "BHB",
+    "HBH",
+    "BHB"
+  ],
+  "result": {
+    "count": 2,
+    "item": "crynicite:citrine_crystal"
+  },
+  "show_notification": true
+}

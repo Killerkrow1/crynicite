@@ -28,6 +28,15 @@ public class ModItems {
     public static final Item RAW_PYRITE = registerItem("raw_pyrite",
             new Item(new FabricItemSettings()));
 
+    public static final Item CITRINE_CRYSTAL = registerItem("citrine_crystal",
+            new Item(new FabricItemSettings()));
+    public static final Item AMETRINE_CRYSTAL = registerItem("ametrine_crystal",
+            new Ametrine(new FabricItemSettings()));
+    public static final Item AMETRINE_GLAIVE = registerItem("ametrine_glaive",
+            new Glaive(CryniciteToolMaterials.AMETRINE, 7, -3.4f, new FabricItemSettings()));
+    public static final Item AMETRINE_DUAL_BLADES = registerItem("ametrine_dual_blades",
+            new DualBlades(CryniciteToolMaterials.AMETRINE, 7, -3.4f, new FabricItemSettings()));
+
     public static final Item CRYSEUM_GREATHAMMER = registerItem("cryseum_greathammer",
             new GreatHammer(CryniciteToolMaterials.CRYSEUM, 7, -3.4f, new FabricItemSettings()));
     public static final Item CINICITE_KATANA = registerItem("cinicite_katana",

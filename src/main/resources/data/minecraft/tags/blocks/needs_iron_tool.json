@@ -7,6 +7,8 @@
     "crynicite:pyrite_block",
     "crynicite:cryseum_block",
     "crynicite:cinicite_block",
-    "crynicite:cynicite_block"
+    "crynicite:cynicite_block",
+    "crynicite:ametrine_block",
+    "crynicite:citrine_block"
   ]
 }

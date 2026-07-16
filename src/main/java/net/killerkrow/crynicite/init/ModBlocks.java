@@ -31,6 +31,11 @@ public class ModBlocks {
     public static final Block PYRITE_BLOCK = registerBlock("pyrite_block",
             new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE)));
 
+    public static final Block AMETRINE_BLOCK = registerBlock("ametrine_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).nonOpaque()));
+    public static final Block CITRINE_BLOCK = registerBlock("citrine_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).nonOpaque()));
+
     public static final Block PYRITE_FIRE = registerBlock("pyrite_fire",
             new PyriteFire(AbstractBlock.Settings.create()
                     .noCollision().breakInstantly().replaceable().dropsNothing().luminance(state -> 15).sounds(BlockSoundGroup.WOOL)));

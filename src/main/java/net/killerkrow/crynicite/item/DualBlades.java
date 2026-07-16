@@ -6,7 +6,6 @@ import net.killerkrow.crynicite.util.RaycastHelper;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -34,19 +33,33 @@ public class DualBlades extends SwordItem implements Vanishable {
         if (!world.isClient()) {
             NbtCompound nbt = stack.getOrCreateNbt();
             nbt.putBoolean("Unbreakable", true);
-            if (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) == 0) {
-                stack.addEnchantment(Enchantments.SILK_TOUCH, 1);
-            }
         }
     }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack stack = user.getStackInHand(hand);
+        ItemStack offstack = user.getOffHandStack();
 
         // Please have my enchantment
         int enchantmentLevel = EnchantmentHelper.getLevel(ModEnchantments.CHAINED, stack);
+        int enchantmentLeveloff = EnchantmentHelper.getLevel(ModEnchantments.CHAINED, offstack);
         if (enchantmentLevel > 0 && !world.isClient()) {
+            // Be an enttity I'm looking at
+            LivingEntity target = RaycastHelper.getTargetEntity(user, 16.0D); // max range
+
+            if (target != null) {
+                target.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 160, 1));
+                target.addStatusEffect(new StatusEffectInstance(StatusEffects.WITHER, 160, 1));
+
+                // GET PULLED
+                PullTaskTracker.startPulling((ServerWorld) world, user, target);
+
+                user.getItemCooldownManager().set(this, 100);
+                return TypedActionResult.success(stack, world.isClient());
+            }
+        }
+        if (enchantmentLeveloff > 0 && !world.isClient()) {
             // Be an enttity I'm looking at
             LivingEntity target = RaycastHelper.getTargetEntity(user, 16.0D); // max range
 

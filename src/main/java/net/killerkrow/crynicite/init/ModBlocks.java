@@ -12,6 +12,7 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
@@ -32,9 +33,9 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.COAL_ORE)));
 
     public static final Block AMETRINE_BLOCK = registerBlock("ametrine_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).nonOpaque()));
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).nonOpaque().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
     public static final Block CITRINE_BLOCK = registerBlock("citrine_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).nonOpaque()));
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).nonOpaque().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
     public static final Block PYRITE_FIRE = registerBlock("pyrite_fire",
             new PyriteFire(AbstractBlock.Settings.create()

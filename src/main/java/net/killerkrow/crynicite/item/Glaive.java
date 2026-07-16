@@ -63,8 +63,8 @@ public class Glaive extends SwordItem implements Vanishable {
 
             if (!world.isClient()) {
                 Vec3d lookDir = player.getRotationVector();
-                Vec3d velocity = new Vec3d(lookDir.x, 0.0, lookDir.z).normalize().multiply(targetBlocks * 1.35); // Adjustt this if needed
-                player.addVelocity(velocity.x, 0.2, velocity.z); //Need a small upwards boost yk
+                Vec3d velocity = new Vec3d(0.0, lookDir.y, 0.0).normalize().multiply(targetBlocks * 1.35); // Adjustt this if needed
+                player.addVelocity(0.0, velocity.y, 0.0); //Need a small upwards boost yk
                 player.velocityModified = true;
 
                 // Countdown

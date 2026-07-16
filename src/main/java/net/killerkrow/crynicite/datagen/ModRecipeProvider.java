@@ -163,7 +163,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('B',Items.AMETHYST_SHARD)
                 .criterion(hasItem(ModItems.CITRINE_CRYSTAL), conditionsFromItem(ModItems.CITRINE_CRYSTAL))
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "ametrine_crystal"));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.AMETRINE_DUAL_BLADES)
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.AMETRINE_DUAL_BLADES, 2)
                 .pattern("A A")
                 .pattern("A A")
                 .pattern("S S")
@@ -179,7 +179,28 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('S',Items.STICK)
                 .criterion(hasItem(ModItems.AMETRINE_CRYSTAL), conditionsFromItem(ModItems.AMETRINE_CRYSTAL))
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "ametrine_glaive"));
-
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.AMETRINE_BLOCK)
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .input('A',ModItems.AMETRINE_CRYSTAL)
+                .criterion(hasItem(ModItems.AMETRINE_CRYSTAL), conditionsFromItem(ModItems.AMETRINE_CRYSTAL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "ametrine_block_to"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CITRINE_BLOCK)
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .input('A',ModItems.CITRINE_CRYSTAL)
+                .criterion(hasItem(ModItems.CITRINE_CRYSTAL), conditionsFromItem(ModItems.CITRINE_CRYSTAL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "citrine_block_to"));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.AMETRINE_CRYSTAL, 9)
+                .input(ModBlocks.AMETRINE_BLOCK)
+                .criterion(hasItem(ModBlocks.AMETRINE_BLOCK), conditionsFromItem(ModBlocks.AMETRINE_BLOCK))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "ametrine_block_from"));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CITRINE_CRYSTAL, 9)
+                .input(ModBlocks.CITRINE_BLOCK)
+                .criterion(hasItem(ModBlocks.CITRINE_BLOCK), conditionsFromItem(ModBlocks.CITRINE_BLOCK))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "citrine_block_from"));
 
         ItemConvertible cookedPyriteItem = ModItems.RAW_PYRITE;
         ItemConvertible overworld = ModBlocks.PYRITE_ORE;

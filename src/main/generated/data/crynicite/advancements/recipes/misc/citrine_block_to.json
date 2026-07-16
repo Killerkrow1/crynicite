@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_citrine_crystal": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "crynicite:citrine_crystal"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "crynicite:citrine_block_to"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_citrine_crystal",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "crynicite:citrine_block_to"
+    ]
+  },
+  "sends_telemetry_event": false
+}

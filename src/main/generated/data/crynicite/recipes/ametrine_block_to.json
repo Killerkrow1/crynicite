@@ -4,19 +4,15 @@
   "key": {
     "A": {
       "item": "crynicite:ametrine_crystal"
-    },
-    "S": {
-      "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "A A",
-    "A A",
-    "S S"
+    "AAA",
+    "AAA",
+    "AAA"
   ],
   "result": {
-    "count": 2,
-    "item": "crynicite:ametrine_dual_blades"
+    "item": "crynicite:ametrine_block"
   },
   "show_notification": true
 }

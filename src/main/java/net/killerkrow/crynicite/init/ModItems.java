@@ -33,9 +33,9 @@ public class ModItems {
     public static final Item AMETRINE_CRYSTAL = registerItem("ametrine_crystal",
             new Ametrine(new FabricItemSettings()));
     public static final Item AMETRINE_GLAIVE = registerItem("ametrine_glaive",
-            new Glaive(CryniciteToolMaterials.AMETRINE, 7, -3.4f, new FabricItemSettings()));
+            new Glaive(CryniciteToolMaterials.AMETRINE, 5, -2.8f, new FabricItemSettings()));
     public static final Item AMETRINE_DUAL_BLADES = registerItem("ametrine_dual_blades",
-            new DualBlades(CryniciteToolMaterials.AMETRINE, 7, -3.4f, new FabricItemSettings()));
+            new DualBlades(CryniciteToolMaterials.AMETRINE, 4, -3.0f, new FabricItemSettings()));
 
     public static final Item CRYSEUM_GREATHAMMER = registerItem("cryseum_greathammer",
             new GreatHammer(CryniciteToolMaterials.CRYSEUM, 7, -3.4f, new FabricItemSettings()));

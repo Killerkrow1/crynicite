@@ -19,7 +19,7 @@ public class ModLootTableModifiers {
             if(WITHER_SKELETON.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.25f))
+                        .conditionally(RandomChanceLootCondition.builder(0.05f))
                         .with(ItemEntry.builder(Items.WITHER_SKELETON_SKULL))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 

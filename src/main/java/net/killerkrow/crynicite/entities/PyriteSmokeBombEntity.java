@@ -3,6 +3,7 @@ package net.killerkrow.crynicite.entities;
 import net.killerkrow.crynicite.init.ModBlocks;
 import net.killerkrow.crynicite.init.ModItems;
 import net.killerkrow.crynicite.init.ModParticles;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
@@ -71,5 +72,20 @@ public class PyriteSmokeBombEntity extends ThrownItemEntity {
                     0.05 // Speed
             );
         }
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+        // Restricts heavy logic or block modifications to the server side
+        if (this.getWorld().isClient()) {
+            return;
+        }
+        // Check for the shooter
+//        Entity owner = this.getOwner();
+//        if (owner == null || owner.isRemoved()) {
+//            // Handles the missing owner safely or it will poof the item
+//            this.discard();
+//        }
     }
 }

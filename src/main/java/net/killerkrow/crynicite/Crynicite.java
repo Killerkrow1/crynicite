@@ -39,9 +39,6 @@ public class Crynicite implements ModInitializer {
 					&& player.getStackInHand(hand).isOf(Items.BONE_MEAL)) {
 
 				if (!world.isClient()) {
-					if (!player.getAbilities().creativeMode) {
-						player.getStackInHand(hand).decrement(0);
-					}
 
 					var pos = hitResult.getBlockPos().up();
 

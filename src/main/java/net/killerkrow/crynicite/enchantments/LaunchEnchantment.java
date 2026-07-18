@@ -8,7 +8,7 @@ import net.minecraft.item.ItemStack;
 
 public class LaunchEnchantment extends Enchantment {
     public LaunchEnchantment() {
-        super(Rarity.UNCOMMON, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+        super(Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
     }
 
     @Override
@@ -18,6 +18,6 @@ public class LaunchEnchantment extends Enchantment {
 
     @Override
     public int getMaxLevel() {
-        return 3;
+        return 1;
     }
 }

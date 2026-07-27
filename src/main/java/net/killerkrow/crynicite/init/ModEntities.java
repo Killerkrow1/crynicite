@@ -1,7 +1,9 @@
-package net.killerkrow.crynicite.entities;
+package net.killerkrow.crynicite.init;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.killerkrow.crynicite.Crynicite;
+import net.killerkrow.crynicite.entities.PyriteChunkEntity;
+import net.killerkrow.crynicite.entities.PyriteSmokeBombEntity;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -19,4 +21,8 @@ public class ModEntities {
             new Identifier(Crynicite.MOD_ID, "pyrite_smoke_bomb_projectile"),
             FabricEntityTypeBuilder.<PyriteSmokeBombEntity>create(SpawnGroup.MISC, PyriteSmokeBombEntity::new)
                     .dimensions(EntityDimensions.fixed(0.25f, 0.25f)).build());
+
+    public static void registerModEntities() {
+        Crynicite.LOGGER.info("Registering Mod Entities for " + Crynicite.MOD_ID);
+    }
 }

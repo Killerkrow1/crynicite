@@ -52,6 +52,39 @@ public abstract class ItemRendererMixin {
                     "dual_blades_held", "inventory"));
         }
 
+        if (stack.isOf(ModItems.OBLITUS_CLEAVER) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).Crynicite$getModels().getModelManager().getModel(new ModelIdentifier(Crynicite.MOD_ID,
+                    "cleaver_held", "inventory"));
+        }
+        if (stack.isOf(ModItems.OBLITUS_GREATAXE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).Crynicite$getModels().getModelManager().getModel(new ModelIdentifier(Crynicite.MOD_ID,
+                    "greataxe_held", "inventory"));
+        }
+        if (stack.isOf(ModItems.OBLITUS_GREATPICKAXE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).Crynicite$getModels().getModelManager().getModel(new ModelIdentifier(Crynicite.MOD_ID,
+                    "greatpickaxe_held", "inventory"));
+        }
+        if (stack.isOf(ModItems.OBLITUS_GREATSHOVEL) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).Crynicite$getModels().getModelManager().getModel(new ModelIdentifier(Crynicite.MOD_ID,
+                    "greatshovel_held", "inventory"));
+        }
+        if (stack.isOf(ModItems.OBLITUS_GREATSWORD) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).Crynicite$getModels().getModelManager().getModel(new ModelIdentifier(Crynicite.MOD_ID,
+                    "greatsword_held", "inventory"));
+        }
+        if (stack.isOf(ModItems.OBLITUS_RIPPERSWORD) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).Crynicite$getModels().getModelManager().getModel(new ModelIdentifier(Crynicite.MOD_ID,
+                    "rippersword_held", "inventory"));
+        }
+        if (stack.isOf(ModItems.OBLITUS_SCISSORBLADES_FULL) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).Crynicite$getModels().getModelManager().getModel(new ModelIdentifier(Crynicite.MOD_ID,
+                    "oblitus_scissorblades_full_held", "inventory"));
+        }
+        if (stack.isOf(ModItems.OBLITUS_SCISSORBLADES_HALF) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).Crynicite$getModels().getModelManager().getModel(new ModelIdentifier(Crynicite.MOD_ID,
+                    "oblitus_scissorblades_half_held", "inventory"));
+        }
+
         return value;
     }
 }

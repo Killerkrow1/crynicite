@@ -31,5 +31,14 @@ public abstract class ModelLoaderMixin {
         this.addModel(new ModelIdentifier(Crynicite.MOD_ID, "scissorblades_full_held", "inventory"));
         this.addModel(new ModelIdentifier(Crynicite.MOD_ID, "glaive_held", "inventory"));
         this.addModel(new ModelIdentifier(Crynicite.MOD_ID, "dual_blades_held", "inventory"));
+
+        this.addModel(new ModelIdentifier(Crynicite.MOD_ID, "cleaver_held", "inventory"));
+        this.addModel(new ModelIdentifier(Crynicite.MOD_ID, "greataxe_held", "inventory"));
+        this.addModel(new ModelIdentifier(Crynicite.MOD_ID, "greatpickaxe_held", "inventory"));
+        this.addModel(new ModelIdentifier(Crynicite.MOD_ID, "greatshovel_held", "inventory"));
+        this.addModel(new ModelIdentifier(Crynicite.MOD_ID, "greatsword_held", "inventory"));
+        this.addModel(new ModelIdentifier(Crynicite.MOD_ID, "rippersword_held", "inventory"));
+        this.addModel(new ModelIdentifier(Crynicite.MOD_ID, "oblitus_scissorblades_full_held", "inventory"));
+        this.addModel(new ModelIdentifier(Crynicite.MOD_ID, "oblitus_scissorblades_half_held", "inventory"));
     }
 }

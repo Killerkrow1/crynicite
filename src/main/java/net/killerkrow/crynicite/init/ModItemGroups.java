@@ -46,6 +46,21 @@ public class ModItemGroups {
                         entries.add(ModItems.AMETRINE_GLAIVE);
                         entries.add(ModItems.AMETRINE_DUAL_BLADES);
 
+                        entries.add(ModItems.OBLITUS_STEEL);
+
+                        entries.add(ModItems.OBLITUS_CLEAVER);
+                        entries.add(ModItems.OBLITUS_GREATAXE);
+                        entries.add(ModItems.OBLITUS_GREATPICKAXE);
+                        entries.add(ModItems.OBLITUS_GREATSHOVEL);
+                        entries.add(ModItems.OBLITUS_GREATSWORD);
+                        entries.add(ModItems.OBLITUS_RIPPERSWORD);
+                        entries.add(ModItems.OBLITUS_SCISSORBLADES_FULL);
+                        entries.add(ModItems.OBLITUS_SCISSORBLADES_HALF);
+
+                        entries.add(ModItems.OBLITUS_HELMET);
+                        entries.add(ModItems.OBLITUS_CHESTPLATE);
+                        entries.add(ModItems.OBLITUS_LEGGINGS);
+                        entries.add(ModItems.OBLITUS_BOOTS);
                     }).build());
 
     public static void registerItemGroups() {

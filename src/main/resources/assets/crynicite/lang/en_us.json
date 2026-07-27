@@ -19,6 +19,21 @@
   "item.crynicite.pyrite_ingot": "Pyrite Ingot",
   "item.crynicite.raw_pyrite": "Raw Pyrite",
 
+
+  "item.crynicite.oblitus_steel": "Oblitus Steel",
+  "item.crynicite.oblitus_cleaver": "Oblitus Cleaver",
+  "item.crynicite.oblitus_greataxe": "Oblitus Greataxe",
+  "item.crynicite.oblitus_greatpickaxe": "Oblitus Greatpickaxe",
+  "item.crynicite.oblitus_greatshovel": "Oblitus Greatshovel",
+  "item.crynicite.oblitus_greatsword": "Oblitus Greatsword",
+  "item.crynicite.oblitus_rippersword": "Oblitus Rippersword",
+  "item.crynicite.oblitus_scissorblades_full": "Oblitus Scissorblades",
+  "item.crynicite.oblitus_scissorblades_half": "Oblitus Scissorblade",
+  "item.crynicite.oblitus_helmet": "Oblitus Helmet",
+  "item.crynicite.oblitus_chestplate": "Oblitus Chestplate",
+  "item.crynicite.oblitus_leggings": "Oblitus Leggings",
+  "item.crynicite.oblitus_boots": "Oblitus Boots",
+
   "block.crynicite.explode_me": "PLEASE EXPLODE ME, I EXIST TO EXPLODE",
   "block.crynicite.pyrite_fire": "Pyrite Fire",
   "block.crynicite.pyrite_ore": "Pyrite Ore",
@@ -49,7 +64,7 @@
   "tooltip.crynicite.steel.tooltip": "This is a Dev WIP Item, if you somehow have it... get rid of it. This will crash the game bc it is 100% broken.",
   "tooltip.crynicite.smokebomb": "Thrown down to create a smoke that's explosive when touched!",
   "tooltip.crynicite.glaive.tooltip": "A glaive with a mystical crystal as it's ornament. It has a unique effect.",
-  "tooltip.crynicite.dualblades.tooltip": "Dual Blades constructed to attack and bind.",
+  "tooltip.crynicite.dual blades.tooltip": "Dual Blades constructed to attack and bind.",
   "tooltip.crynicite.ametrine_crystal.tooltip": "A color that shines and radiates amazingly. A crystal meant as a gift for close friends.",
   "tooltip.crynicite.ametrine_crystal2.tooltip": "Spiritually this crystal bridges the gap between the Material World and the Divine World."
 }

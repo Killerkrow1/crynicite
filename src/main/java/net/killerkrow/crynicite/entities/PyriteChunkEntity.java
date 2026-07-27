@@ -1,10 +1,13 @@
 package net.killerkrow.crynicite.entities;
 
+import net.killerkrow.crynicite.init.ModEntities;
 import net.killerkrow.crynicite.init.ModItems;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
+import net.minecraft.network.listener.ClientPlayPacketListener;
+import net.minecraft.network.packet.Packet;
+import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -16,6 +19,11 @@ public class PyriteChunkEntity extends ThrownItemEntity {
 
     public PyriteChunkEntity(World world, double x, double y, double z) {
         super(ModEntities.PYRITE_CHUNK_ENTITY, x, y, z, world);
+    }
+
+    @Override
+    public Packet<ClientPlayPacketListener> createSpawnPacket() {
+        return new EntitySpawnS2CPacket(this);
     }
 
     @Override
@@ -46,7 +54,6 @@ public class PyriteChunkEntity extends ThrownItemEntity {
     @Override
     public void tick() {
         super.tick();
-        // Restricts heavy logic or block modifications to the server side
         if (this.getWorld().isClient()) {
             return;
         }

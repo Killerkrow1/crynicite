@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "crynicite:item/oblitus_greataxe_inventory"
+  }
+}

@@ -1,16 +1,19 @@
 package net.killerkrow.crynicite.entities;
 
 import net.killerkrow.crynicite.init.ModBlocks;
+import net.killerkrow.crynicite.init.ModEntities;
 import net.killerkrow.crynicite.init.ModItems;
 import net.killerkrow.crynicite.init.ModParticles;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
+import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.network.listener.ClientPlayPacketListener;
+import net.minecraft.network.packet.Packet;
 
 public class PyriteSmokeBombEntity extends ThrownItemEntity {
     public PyriteSmokeBombEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
@@ -19,6 +22,12 @@ public class PyriteSmokeBombEntity extends ThrownItemEntity {
 
     public PyriteSmokeBombEntity(World world, double x, double y, double z) {
         super(ModEntities.PYRITE_SMOKE_BOMB_ENTITY, x, y, z, world);
+    }
+
+
+    @Override
+    public Packet<ClientPlayPacketListener> createSpawnPacket() {
+        return new EntitySpawnS2CPacket(this);
     }
 
     @Override
@@ -77,7 +86,6 @@ public class PyriteSmokeBombEntity extends ThrownItemEntity {
     @Override
     public void tick() {
         super.tick();
-        // Restricts heavy logic or block modifications to the server side
         if (this.getWorld().isClient()) {
             return;
         }

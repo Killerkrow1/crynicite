@@ -87,7 +87,7 @@ public class OblitusScissorBlade extends SwordItem implements Vanishable {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if (Screen.hasShiftDown()) {
-            tooltip.add(Text.translatable("tooltip.crynicite.rightscissor.tooltip").formatted(Formatting.DARK_PURPLE));
+            tooltip.add(Text.translatable("tooltip.crynicite.obscissor.tooltip").formatted(Formatting.DARK_PURPLE));
         } else {
             tooltip.add(Text.literal("[SHIFT]").formatted(Formatting.DARK_GRAY));
         }

@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "crynicite:fallen_citadel",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 564604120,
+
+    "spacing": 36,
+    "separation": 12,
+    "type": "minecraft:random_spread"
+  }
+}

@@ -6,9 +6,7 @@ import net.killerkrow.crynicite.item.*;
 import net.killerkrow.crynicite.util.CryniciteArmorMaterials;
 import net.killerkrow.crynicite.util.CryniciteToolMaterials;
 import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterials;
 import net.minecraft.item.Item;
-import net.minecraft.item.SwordItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -56,28 +54,28 @@ public class ModItems {
     public static final Item AMETRINE_GLAIVE = registerItem("ametrine_glaive",
             new Glaive(CryniciteToolMaterials.AMETRINE, 5, -2.8f, new FabricItemSettings()));
     public static final Item AMETRINE_DUAL_BLADES = registerItem("ametrine_dual_blades",
-            new DualBlades(CryniciteToolMaterials.AMETRINE, 4, -3.0f, new FabricItemSettings()));
+            new DualBlades(CryniciteToolMaterials.AMETRINE, 4, -2.5f, new FabricItemSettings()));
 
 
     public static final Item OBLITUS_STEEL = registerItem("oblitus_steel",
             new Item(new FabricItemSettings()));
 
     public static final Item OBLITUS_CLEAVER = registerItem("oblitus_cleaver",
-            new Cleaver(CryniciteToolMaterials.OBLITUS, 4, -3.0f, new FabricItemSettings()));
+            new Cleaver(CryniciteToolMaterials.OBLITUS, 5, -3.0f, new FabricItemSettings().fireproof()));
     public static final Item OBLITUS_GREATAXE = registerItem("oblitus_greataxe",
-            new GreatAxe(CryniciteToolMaterials.OBLITUS, 4, -3.0f, new FabricItemSettings()));
+            new GreatAxe(CryniciteToolMaterials.OBLITUS, 6, -3.1f, new FabricItemSettings().fireproof()));
     public static final Item OBLITUS_GREATPICKAXE = registerItem("oblitus_greatpickaxe",
-            new GreatPickaxe(CryniciteToolMaterials.OBLITUS, 4, -3.0f, new FabricItemSettings()));
+            new GreatPickaxe(CryniciteToolMaterials.OBLITUS, 2, -2.8f, new FabricItemSettings().fireproof()));
     public static final Item OBLITUS_GREATSHOVEL = registerItem("oblitus_greatshovel",
-            new GreatShovel(CryniciteToolMaterials.OBLITUS, 4, -3.0f, new FabricItemSettings()));
+            new GreatShovel(CryniciteToolMaterials.OBLITUS, 2, -3.0f, new FabricItemSettings().fireproof()));
     public static final Item OBLITUS_GREATSWORD = registerItem("oblitus_greatsword",
-            new GreatSword(CryniciteToolMaterials.OBLITUS, 4, -3.0f, new FabricItemSettings()));
+            new GreatSword(CryniciteToolMaterials.OBLITUS, 4, -2.7f, new FabricItemSettings().fireproof()));
     public static final Item OBLITUS_RIPPERSWORD = registerItem("oblitus_rippersword",
-            new Rippersword(CryniciteToolMaterials.OBLITUS, 4, -3.0f, new FabricItemSettings()));
+            new Rippersword(CryniciteToolMaterials.OBLITUS, 5, -3.2f, new FabricItemSettings().fireproof()));
     public static final Item OBLITUS_SCISSORBLADES_FULL = registerItem("oblitus_scissorblades_full",
-            new OblitusScissorBlades(CryniciteToolMaterials.OBLITUS, 4, -3.0f, new FabricItemSettings()));
+            new OblitusScissorBlades(CryniciteToolMaterials.OBLITUS, 6, -3.0f, new FabricItemSettings().fireproof()));
     public static final Item OBLITUS_SCISSORBLADES_HALF = registerItem("oblitus_scissorblades_half",
-            new OblitusScissorBlade(CryniciteToolMaterials.OBLITUS, 4, -3.0f, new FabricItemSettings()));
+            new OblitusScissorBlade(CryniciteToolMaterials.OBLITUS, 5, -2.8f, new FabricItemSettings().fireproof()));
 
     public static final Item OBLITUS_HELMET = registerItem("oblitus_helmet",
             new ArmorItem(CryniciteArmorMaterials.OBLITUS, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof()));

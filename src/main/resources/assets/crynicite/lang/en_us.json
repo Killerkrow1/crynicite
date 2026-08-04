@@ -50,6 +50,8 @@
   "block.crynicite.citrine_block": "Citrine Block",
   "enchantment.crynicite.chained": "Chained",
   "enchantment.crynicite.launch": "Launch",
+  "enchantment.crynicite.chained.desc": "Right clicking in the direction of an entity will pull it towards you!",
+  "enchantment.crynicite.launch.desc": "Looking up and building a charge will allow you to shoot upwards!",
 
   "block.crynicite.cryseum_block": "Cryseum Block",
   "block.crynicite.cinicite_block": "Cinicite Block",
@@ -66,5 +68,8 @@
   "tooltip.crynicite.glaive.tooltip": "A glaive with a mystical crystal as it's ornament. It has a unique effect.",
   "tooltip.crynicite.dual blades.tooltip": "Dual Blades constructed to attack and bind.",
   "tooltip.crynicite.ametrine_crystal.tooltip": "A color that shines and radiates amazingly. A crystal meant as a gift for close friends.",
-  "tooltip.crynicite.ametrine_crystal2.tooltip": "Spiritually this crystal bridges the gap between the Material World and the Divine World."
+  "tooltip.crynicite.ametrine_crystal2.tooltip": "Spiritually this crystal bridges the gap between the Material World and the Divine World.",
+  "tooltip.crynicite.obscissor.tooltip": "Just half of the power that comes from Oblitus Steel.",
+  "tooltip.crynicite.obscissorblades.tooltip": "The full conjoined sharpened power of the Oblitus Steel.",
+  "tooltip.crynicite.dualblades.tooltip": "A dual blade meant to enchain the target swiftly and skillfully."
 }

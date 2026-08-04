@@ -1,0 +1,15 @@
+{
+  "name": "crynicite:fallen_citadel/fallen_citadel",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "crynicite:fallen_citadel",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "crynicite:oblitus_helmet",
+    "crynicite:oblitus_chestplate",
+    "crynicite:oblitus_leggings",
+    "crynicite:oblitus_boots"
+  ]
+}

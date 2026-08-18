@@ -38,8 +38,7 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).nonOpaque().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
     public static final Block PYRITE_FIRE = registerBlock("pyrite_fire",
-            new PyriteFire(AbstractBlock.Settings.create()
-                    .noCollision().breakInstantly().replaceable().dropsNothing().luminance(state -> 15).sounds(BlockSoundGroup.WOOL)));
+            new PyriteFire(FabricBlockSettings.copyOf(Blocks.FIRE).dropsNothing().luminance(15).collidable(false), 5f));
     public static final Block EXPLODE_ME = registerBlock("explode_me",
             new ExploderBlock(FabricBlockSettings.copyOf(Blocks.TNT).collidable(false).hardness(0)
                     .resistance(0).breakInstantly().burnable().dropsNothing().nonOpaque()));

@@ -202,7 +202,107 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModBlocks.CITRINE_BLOCK), conditionsFromItem(ModBlocks.CITRINE_BLOCK))
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "citrine_block_from"));
 
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBLITUS_GREATSHOVEL, 1)
+                .pattern(" O ")
+                .pattern(" T ")
+                .pattern(" S ")
+                .input('O',ModItems.OBLITUS_STEEL)
+                .input('T',Items.NETHERITE_SHOVEL)
+                .input('S',Items.STICK)
+                .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_greatshovel"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBLITUS_GREATSWORD, 1)
+                .pattern(" O ")
+                .pattern(" O ")
+                .pattern(" S ")
+                .input('O',ModItems.OBLITUS_STEEL)
+                .input('S',Items.NETHERITE_SWORD)
+                .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_greatsword"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBLITUS_RIPPERSWORD, 1)
+                .pattern("  O")
+                .pattern(" OO")
+                .pattern("T  ")
+                .input('O',ModItems.OBLITUS_STEEL)
+                .input('T',Items.NETHERITE_SWORD)
+                .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_rippersword"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBLITUS_SCISSORBLADES_FULL, 1)
+                .pattern("O O")
+                .pattern(" N ")
+                .pattern("OSO")
+                .input('O',ModItems.OBLITUS_STEEL)
+                .input('S',Items.NETHERITE_SWORD)
+                .input('N',Items.NETHERITE_INGOT)
+                .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_scissorblades"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBLITUS_HELMET, 1)
+                .pattern("OOO")
+                .pattern("ONO")
+                .pattern("   ")
+                .input('O',ModItems.OBLITUS_STEEL)
+                .input('N',Items.NETHERITE_INGOT)
+                .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_helmet"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBLITUS_CHESTPLATE, 1)
+                .pattern("O O")
+                .pattern("ONO")
+                .pattern("OOO")
+                .input('O',ModItems.OBLITUS_STEEL)
+                .input('N',Items.NETHERITE_INGOT)
+                .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_chestplate"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBLITUS_LEGGINGS, 1)
+                .pattern("OOO")
+                .pattern("O O")
+                .pattern("N N")
+                .input('O',ModItems.OBLITUS_STEEL)
+                .input('N',Items.NETHERITE_INGOT)
+                .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_leggings"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBLITUS_BOOTS, 1)
+                .pattern("   ")
+                .pattern("O O")
+                .pattern("N N")
+                .input('O',ModItems.OBLITUS_STEEL)
+                .input('N',Items.NETHERITE_INGOT)
+                .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_boots"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBLITUS_CLEAVER, 1)
+                .pattern(" OO")
+                .pattern(" SO")
+                .pattern(" S ")
+                .input('O',ModItems.OBLITUS_STEEL)
+                .input('S',Items.STICK)
+                .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_cleaver"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBLITUS_GREATAXE, 1)
+                .pattern("OOO")
+                .pattern("OAO")
+                .pattern(" S ")
+                .input('O',ModItems.OBLITUS_STEEL)
+                .input('S',Items.STICK)
+                .input('A',Items.NETHERITE_AXE)
+                .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_greataxe"));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBLITUS_GREATPICKAXE, 1)
+                .pattern("OOO")
+                .pattern(" A ")
+                .pattern(" S ")
+                .input('O',ModItems.OBLITUS_STEEL)
+                .input('S',Items.STICK)
+                .input('A',Items.NETHERITE_PICKAXE)
+                .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_greatpickaxe"));
+
+
+
+
         ItemConvertible cookedPyriteItem = ModItems.RAW_PYRITE;
+        ItemConvertible cookedPyriteIngot = ModItems.PYRITE_INGOT;
         ItemConvertible overworld = ModBlocks.PYRITE_ORE;
         ItemConvertible deepslate = ModBlocks.DEEPSLATE_PYRITE_ORE;
         ItemConvertible nether = ModBlocks.NETHER_PYRITE_ORE;
@@ -214,6 +314,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 200, "deepslate_pyrite_smelting");
         offerSmelting(exporter, List.of(nether), RecipeCategory.MISC, cookedPyriteItem, 1f,
                 200, "nether_pyrite_smelting");
+
+        offerSmelting(exporter, List.of(cookedPyriteItem), RecipeCategory.MISC, cookedPyriteIngot, 1f,
+                200, "pyrite_ingot_smelting");
 
         // Blasting
         offerBlasting(exporter, List.of(overworld), RecipeCategory.MISC, cookedPyriteItem, 1f,

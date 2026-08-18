@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "O": {
+      "item": "crynicite:oblitus_steel"
+    }
+  },
+  "pattern": [
+    "O O",
+    "ONO",
+    "OOO"
+  ],
+  "result": {
+    "item": "crynicite:oblitus_chestplate"
+  },
+  "show_notification": true
+}

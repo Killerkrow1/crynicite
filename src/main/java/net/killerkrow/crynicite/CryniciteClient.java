@@ -17,6 +17,7 @@ public class CryniciteClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.EXPLODE_ME, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CITRINE_BLOCK, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AMETRINE_BLOCK, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PYRITE_FIRE, RenderLayer.getCutout());
 
         EntityRendererRegistry.register(ModEntities.PYRITE_CHUNK_ENTITY, FlyingItemEntityRenderer::new);
         EntityRendererRegistry.register(ModEntities.PYRITE_SMOKE_BOMB_ENTITY, FlyingItemEntityRenderer::new);

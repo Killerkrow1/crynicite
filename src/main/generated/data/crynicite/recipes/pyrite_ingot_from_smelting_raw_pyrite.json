@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "pyrite_ingot_smelting",
+  "ingredient": {
+    "item": "crynicite:raw_pyrite"
+  },
+  "result": "crynicite:pyrite_ingot"
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "oblitus",
+  "description": {
+    "color": "#B6CBCB",
+    "translate": "trim_material.crynicite.oblitus"
+  },
+  "ingredient": "crynicite:oblitus_steel",
+  "item_model_index": 0.2
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:netherite_axe"
+    },
+    "O": {
+      "item": "crynicite:oblitus_steel"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "OOO",
+    "OAO",
+    " S "
+  ],
+  "result": {
+    "item": "crynicite:oblitus_greataxe"
+  },
+  "show_notification": true
+}

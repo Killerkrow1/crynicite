@@ -41,6 +41,10 @@
   "block.crynicite.nether_pyrite_ore": "Netherrack Pyrite Ore",
   "block.crynicite.pyrite_block": "Pyrite Block",
 
+  "trim_material.crynicite.ametrine": "Ametrine Material",
+  "trim_material.crynicite.cryseum": "Cryseum Material",
+  "trim_material.crynicite.citrine": "Citrine Material",
+  "trim_material.crynicite.oblitus": "Oblitus Material",
 
   "item.crynicite.citrine_crystal": "Citrine Crystal",
   "item.crynicite.ametrine_crystal": "Ametrine Crystal",

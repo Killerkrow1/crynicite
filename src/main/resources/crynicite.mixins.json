@@ -3,6 +3,8 @@
   "package": "net.killerkrow.crynicite.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "AbstractFireBlockMixin",
+    "FurnaceExplosionMixin",
     "TwoHandedGripMixin"
   ],
   "client": [

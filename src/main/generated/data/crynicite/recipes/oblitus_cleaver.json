@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "item": "crynicite:oblitus_steel"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " OO",
+    " SO",
+    " S "
+  ],
+  "result": {
+    "item": "crynicite:oblitus_cleaver"
+  },
+  "show_notification": true
+}

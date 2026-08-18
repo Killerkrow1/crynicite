@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "item": "crynicite:oblitus_steel"
+    },
+    "S": {
+      "item": "minecraft:netherite_sword"
+    }
+  },
+  "pattern": [
+    " O ",
+    " O ",
+    " S "
+  ],
+  "result": {
+    "item": "crynicite:oblitus_greatsword"
+  },
+  "show_notification": true
+}

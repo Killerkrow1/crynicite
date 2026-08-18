@@ -9,7 +9,6 @@ import net.killerkrow.crynicite.world.gen.ModWorldGeneration;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -37,7 +36,7 @@ public class Crynicite implements ModInitializer {
 			var block = blockState.getBlock();
 
 			if ((block == Blocks.END_PORTAL_FRAME)
-					&& player.getStackInHand(hand).isOf(Items.BONE_MEAL)) {
+					&& player.getStackInHand(hand).isOf(ModItems.CRYNICITE_INGOT)) {
 
 				if (!world.isClient()) {
 

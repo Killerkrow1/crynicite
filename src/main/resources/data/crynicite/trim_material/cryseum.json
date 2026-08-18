@@ -1,0 +1,9 @@
+{
+  "asset_name": "cryseum",
+  "description": {
+    "color": "#B6CBCB",
+    "translate": "trim_material.crynicite.cryseum"
+  },
+  "ingredient": "crynicite:cryseum_ingot",
+  "item_model_index": 0.2
+}

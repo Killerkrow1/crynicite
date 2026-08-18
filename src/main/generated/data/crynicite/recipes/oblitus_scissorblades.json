@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "O": {
+      "item": "crynicite:oblitus_steel"
+    },
+    "S": {
+      "item": "minecraft:netherite_sword"
+    }
+  },
+  "pattern": [
+    "O O",
+    " N ",
+    "OSO"
+  ],
+  "result": {
+    "item": "crynicite:oblitus_scissorblades_full"
+  },
+  "show_notification": true
+}

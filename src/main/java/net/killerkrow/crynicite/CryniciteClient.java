@@ -21,6 +21,8 @@ public class CryniciteClient implements ClientModInitializer {
 
         EntityRendererRegistry.register(ModEntities.PYRITE_CHUNK_ENTITY, FlyingItemEntityRenderer::new);
         EntityRendererRegistry.register(ModEntities.PYRITE_SMOKE_BOMB_ENTITY, FlyingItemEntityRenderer::new);
+        EntityRendererRegistry.register(ModEntities.SPEW_ENTITY, FlyingItemEntityRenderer::new);
+        EntityRendererRegistry.register(ModEntities.HEARTSTRAIN_ENTITY, FlyingItemEntityRenderer::new);
 
         ParticleFactoryRegistry.getInstance().register(ModParticles.PYRITE_PARTICLE, PyriteParticle.Factory::new);
     }

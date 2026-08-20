@@ -27,6 +27,7 @@ public class Crynicite implements ModInitializer {
 		ModParticles.registerParticles();
 		ModEnchantments.registerModEnchantments();
 		ModEntities.registerModEntities();
+		ModEffects.registerEffects();
 
 		ModWorldGeneration.generateModWorldGen();
 		ServerTickEvents.END_WORLD_TICK.register(PullTaskTracker::tick);

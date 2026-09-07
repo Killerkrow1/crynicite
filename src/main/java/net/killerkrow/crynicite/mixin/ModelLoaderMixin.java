@@ -40,5 +40,6 @@ public abstract class ModelLoaderMixin {
         this.addModel(new ModelIdentifier(Crynicite.MOD_ID, "rippersword_held", "inventory"));
         this.addModel(new ModelIdentifier(Crynicite.MOD_ID, "oblitus_scissorblades_full_held", "inventory"));
         this.addModel(new ModelIdentifier(Crynicite.MOD_ID, "oblitus_scissorblades_half_held", "inventory"));
+        this.addModel(new ModelIdentifier(Crynicite.MOD_ID, "eversor_held", "inventory"));
     }
 }

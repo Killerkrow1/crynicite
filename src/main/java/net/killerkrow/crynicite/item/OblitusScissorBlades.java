@@ -28,6 +28,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class OblitusScissorBlades extends SwordItem implements Vanishable {
+
     public OblitusScissorBlades(CryniciteToolMaterials ToolMaterials, int attackDamage, float attackSpeed, FabricItemSettings settings) {
         super(ToolMaterials, attackDamage, attackSpeed, settings);
     }
@@ -37,9 +38,6 @@ public class OblitusScissorBlades extends SwordItem implements Vanishable {
         if (!world.isClient()) {
             NbtCompound nbt = stack.getOrCreateNbt();
             nbt.putBoolean("Unbreakable", true);
-            if (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) == 0) {
-                stack.addEnchantment(Enchantments.SILK_TOUCH, 1);
-            }
         }
     }
 

@@ -23,7 +23,7 @@ public class HeartStrainEntity extends ThrownItemEntity {
     }
 
     public HeartStrainEntity(World world, double x, double y, double z) {
-        super(ModEntities.SPEW_ENTITY, x, y, z, world);
+        super(ModEntities.HEARTSTRAIN_ENTITY, x, y, z, world);
     }
 
     @Override

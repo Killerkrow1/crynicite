@@ -1,7 +1,9 @@
 package net.killerkrow.crynicite.item;
 
+import com.pvpranked.entity.WindChargeEntity;
 import net.killerkrow.crynicite.entities.HeartStrainEntity;
 import net.killerkrow.crynicite.entities.SpewEntity;
+import net.killerkrow.crynicite.init.ModItems;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -73,14 +75,16 @@ public class TestItem extends SwordItem {
     }
 
     private boolean isValidGem(ItemStack stack) {
-        return stack.isOf(Items.DIAMOND) ||
-                stack.isOf(Items.GOLD_INGOT) ||
-                stack.isOf(Items.EMERALD);
+        return stack.isOf(ModItems.CINICITE_CRYSTAL) ||
+                stack.isOf(ModItems.CRYSEUM_INGOT) ||
+                stack.isOf(ModItems.OBLITUS_STEEL) ||
+                stack.isOf(com.pvpranked.item.ModItems.WIND_CHARGE) ||
+                stack.isOf(com.pvpranked.item.ModItems.MACE);
     }
 
     private void triggerAbility(World world, PlayerEntity user, NbtCompound storedNbt) {
         ItemStack storedStack = ItemStack.fromNbt(storedNbt);
-        if (storedStack.isOf(Items.DIAMOND)) {
+        if (storedStack.isOf(ModItems.CINICITE_CRYSTAL)) {
             Vec3d startPos = user.getPos().add(0, user.getStandingEyeHeight() - 0.2, 0);
             Vec3d lookDir = user.getRotationVector();
 
@@ -100,9 +104,9 @@ public class TestItem extends SwordItem {
                     SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS, 1.0F, 1.0F);
 
             user.getItemCooldownManager().set(this, 100);
-            user.sendMessage(Text.literal("Projectile Ability Activated."), true);
+            user.sendMessage(Text.literal("Shatter Shard Ability Activated."), true);
 
-        } else if (storedStack.isOf(Items.GOLD_INGOT)) {
+        } else if (storedStack.isOf(ModItems.CRYSEUM_INGOT)) {
             // Casually theives from the Paradigm Mod :3
             double radius = 10.0D;
             Box boundingBox = user.getBoundingBox().expand(radius);
@@ -119,9 +123,9 @@ public class TestItem extends SwordItem {
                 entity.velocityModified = true;
             }
             user.getItemCooldownManager().set(this, 100);
-            user.sendMessage(Text.literal("Push Away Ability Activated."), true);
+            user.sendMessage(Text.literal("Repulse Ability Activated."), true);
 
-        } else if (storedStack.isOf(Items.EMERALD)) {
+        } else if (storedStack.isOf(ModItems.OBLITUS_STEEL)) {
             Vec3d startPos = user.getPos().add(0, user.getStandingEyeHeight() - 0.2, 0);
             Vec3d lookDir = user.getRotationVector();
 
@@ -139,6 +143,40 @@ public class TestItem extends SwordItem {
 
             user.getItemCooldownManager().set(this, 100);
             user.sendMessage(Text.literal("Heartstrain Ability Activated."), true);
+        } else if (storedStack.isOf(com.pvpranked.item.ModItems.WIND_CHARGE)) {
+            Vec3d startPos = user.getPos().add(0, user.getStandingEyeHeight() - 0.2, 0);
+            Vec3d lookDir = user.getRotationVector();
+
+            Vec3d spreadDir = new Vec3d(-lookDir.z, 0, lookDir.x).normalize();
+
+            for (int i = -3; i <= 3; i++) {
+                Vec3d spawnPos = startPos.add(spreadDir.multiply(i * 0.4));
+
+                WindChargeEntity throwableEntity = WindChargeEntity.create(user, world, user.getPos().getX(), user.getEyePos().getY(), user.getPos().getZ());
+                throwableEntity.setPos(spawnPos.x, spawnPos.y, spawnPos.z);
+                throwableEntity.setVelocity(lookDir.x * 1.5, lookDir.y * 1.5, lookDir.z * 1.5, 1.5f, 0.0f);
+
+                world.spawnEntity(throwableEntity);
+            }
+
+            user.getItemCooldownManager().set(this, 100);
+            user.sendMessage(Text.literal("Windburst Ability Activated."), true);
+        } else if (storedStack.isOf(com.pvpranked.item.ModItems.MACE)) {
+            double range = 15.0;
+            Box box = user.getBoundingBox().expand(range);
+
+            List<LivingEntity> entities = world.getEntitiesByClass(
+                    LivingEntity.class,
+                    box,
+                    entity -> entity != user
+            );
+
+            for (LivingEntity entity : entities) {
+                entity.damage(world.getDamageSources().playerAttack(user), 15.0F);
+            }
+
+            user.getItemCooldownManager().set(this, 100);
+            user.sendMessage(Text.literal("Mace Ability Activated."), true);
         }
     }
 
@@ -152,5 +190,13 @@ public class TestItem extends SwordItem {
             tooltip.add(Text.literal("Engraved Item: NONE"));
         }
         super.appendTooltip(stack, world, tooltip, context);
+    }
+
+    @Override
+    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
+        if (!world.isClient()) {
+            NbtCompound nbt = stack.getOrCreateNbt();
+            nbt.putBoolean("Unbreakable", true);
+        }
     }
 }

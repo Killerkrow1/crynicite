@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "crynicite:crynicite_cleaversword"
+    },
+    "C": {
+      "item": "crynicite:cryseum_ingot"
+    },
+    "D": {
+      "item": "crynicite:crynicite_ingot"
+    },
+    "I": {
+      "item": "crynicite:cinicite_crystal"
+    },
+    "O": {
+      "item": "crynicite:oblitus_steel"
+    }
+  },
+  "pattern": [
+    " IC",
+    "ODO",
+    "AO "
+  ],
+  "result": {
+    "item": "crynicite:eversor"
+  },
+  "show_notification": true
+}

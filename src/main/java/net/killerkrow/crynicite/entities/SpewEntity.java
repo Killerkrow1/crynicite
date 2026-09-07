@@ -75,7 +75,7 @@ public class SpewEntity extends ThrownItemEntity {
 
     @Override
     protected Item getDefaultItem() {
-        return ModItems.OBLITUS_STEEL;
+        return ModItems.CINICITE_CRYSTAL;
     }
 
     @Override

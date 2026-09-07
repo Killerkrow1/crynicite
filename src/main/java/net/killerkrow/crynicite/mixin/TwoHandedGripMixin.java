@@ -62,5 +62,10 @@ public class TwoHandedGripMixin {
                 cir.setReturnValue(BipedEntityModel.ArmPose.CROSSBOW_CHARGE);
             }
         }
+        if (itemStack.getItem() instanceof TestItem) {
+            if (!player.isUsingItem()) {
+                cir.setReturnValue(BipedEntityModel.ArmPose.CROSSBOW_CHARGE);
+            }
+        }
     }
 }

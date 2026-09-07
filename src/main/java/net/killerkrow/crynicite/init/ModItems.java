@@ -88,7 +88,7 @@ public class ModItems {
             new ArmorItem(CryniciteArmorMaterials.OBLITUS, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof()));
 
 
-    public static final Item TEST_ITEM = registerItem("test_item",
+    public static final Item TEST_ITEM = registerItem("eversor",
             new TestItem(ToolMaterials.DIAMOND, 3, -2.4f, new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {

@@ -298,6 +298,18 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_greatpickaxe"));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TEST_ITEM, 1)
+                .pattern(" IC")
+                .pattern("ODO")
+                .pattern("AO ")
+                .input('O',ModItems.OBLITUS_STEEL)
+                .input('D',ModItems.CRYNICITE_INGOT)
+                .input('I',ModItems.CINICITE_CRYSTAL)
+                .input('C',ModItems.CRYSEUM_INGOT)
+                .input('A',ModItems.CRYNICITE_CLEAVERSWORD)
+                .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "eversore"));
+
 
 
 

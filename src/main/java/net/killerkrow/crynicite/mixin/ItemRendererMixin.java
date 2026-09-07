@@ -84,6 +84,10 @@ public abstract class ItemRendererMixin {
             return ((ItemRendererAccessor) this).Crynicite$getModels().getModelManager().getModel(new ModelIdentifier(Crynicite.MOD_ID,
                     "oblitus_scissorblades_half_held", "inventory"));
         }
+        if (stack.isOf(ModItems.TEST_ITEM) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).Crynicite$getModels().getModelManager().getModel(new ModelIdentifier(Crynicite.MOD_ID,
+                    "eversor_held", "inventory"));
+        }
 
         return value;
     }

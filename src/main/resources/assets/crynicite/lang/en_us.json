@@ -75,5 +75,7 @@
   "tooltip.crynicite.ametrine_crystal2.tooltip": "Spiritually this crystal bridges the gap between the Material World and the Divine World.",
   "tooltip.crynicite.obscissor.tooltip": "Just half of the power that comes from Oblitus Steel.",
   "tooltip.crynicite.obscissorblades.tooltip": "The full conjoined sharpened power of the Oblitus Steel.",
-  "tooltip.crynicite.dualblades.tooltip": "A dual blade meant to enchain the target swiftly and skillfully."
+  "tooltip.crynicite.dualblades.tooltip": "A dual blade meant to enchain the target swiftly and skillfully.",
+
+  "item.crynicite.eversor": "Eversor"
 }

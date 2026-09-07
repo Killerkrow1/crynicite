@@ -1,4 +1,4 @@
-// 1.20.1	2026-08-18T16:13:47.9054308	Crynicite/Recipes
+// 1.20.1	2026-08-20T12:39:40.1688306	Crynicite/Recipes
 a7cab748eae6619fadd3a0c145fe2f4213fd6882 data\crynicite\recipes\oblitus_greatpickaxe.json
 e97c0939d6f68a360b24409dd57bbd9d79a3a560 data\crynicite\advancements\recipes\misc\ametrine_block_to.json
 7aa1f539679256e90b0ca51bbf0a3fbfc550772f data\crynicite\recipes\ametrine_dual_blades.json
@@ -26,6 +26,7 @@ c274beac4f5744e0eeb78315c6b313d4721ad22d data\crynicite\advancements\recipes\mis
 3face7f973eb06328d274fbdfb85c5a0af8f4449 data\crynicite\advancements\recipes\misc\cinicite_katana.json
 8be788e529f191ab08f3895bda4aafa951376388 data\crynicite\recipes\cryseum_block_from.json
 f20f564f5e6bd5e378ef26745fbd1fe04e514651 data\crynicite\advancements\recipes\misc\cryseum_block_to.json
+905a0d569fe152a485bfb70001158d2c94414f32 data\crynicite\advancements\recipes\misc\eversore.json
 5e952afbb10df0e62a13922cf27b832a4945ac27 data\crynicite\recipes\crynicite_block_to.json
 58ee3e5e23d2d7e680903c232707ba6dcf629af7 data\crynicite\advancements\recipes\misc\raw_pyrite_from_smelting_pyrite_ore.json
 d0848b01346ff4365137f2a64af69ca5ac5904ba data\crynicite\recipes\pyrite_chunk.json
@@ -47,6 +48,7 @@ c2829520be666b5871a96c40ab5f3e6c3537f8b9 data\crynicite\recipes\pyrite_smoke_bom
 f77209f764a7e20c26ea283fc60efaa1de379c95 data\crynicite\advancements\recipes\misc\oblitus_greatshovel.json
 f64e0a131ad58a16da3507521ddf00b46ed92dac data\crynicite\recipes\oblitus_chestplate.json
 204452cae7ed1013be3774c878dc3b8055c6d3a5 data\crynicite\advancements\recipes\misc\cynicite_block_from.json
+d8101c56332893abe795effa96d25c97736226c3 data\crynicite\recipes\eversore.json
 f4d2ff01611c84150cb4d2c90103c8acec228307 data\crynicite\recipes\cinicite_crystal.json
 9713e9923a32367bb22d819bfacc1d0a147448e5 data\crynicite\advancements\recipes\misc\oblitus_greatsword.json
 2b80e771d7128d1d53c5c81c69988e9d8dc9c513 data\crynicite\recipes\oblitus_helmet.json
@@ -66,8 +68,8 @@ e33bf0143b8c6df173bc0100a045ac89cbcfb2eb data\crynicite\recipes\raw_pyrite_from_
 9f369311777b0dcd8b8b78036be06da2ab9192c0 data\crynicite\advancements\recipes\misc\pyrite_ingot_from_smelting_raw_pyrite.json
 e04f517e1ca2cb49317cfb0dd93e1f7403f02a37 data\crynicite\recipes\ametrine_crystal.json
 239d96521662fb547c0a87734a39a37cb7e3b9c1 data\crynicite\advancements\recipes\misc\oblitus_chestplate.json
-af273edd149b8025b2049257aff9a0ead2d9115d data\crynicite\advancements\recipes\misc\citrine_block_to.json
 3f2777d240da44293c51cfe96feba4575a1f5ba4 data\crynicite\recipes\oblitus_rippersword.json
+af273edd149b8025b2049257aff9a0ead2d9115d data\crynicite\advancements\recipes\misc\citrine_block_to.json
 7bc9a2352f5303e922853ad32f911255975b2d82 data\crynicite\recipes\oblitus_boots.json
 1a1a24b16e8d3fbcbad3b2782a87a2c01d50124b data\crynicite\advancements\recipes\misc\oblitus_cleaver.json
 2cc687e6df5d8ab340cdad70f1c92fa739daae15 data\crynicite\advancements\recipes\misc\crynicite_block_to.json

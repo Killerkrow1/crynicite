@@ -61,6 +61,8 @@ public class ModItemGroups {
                         entries.add(ModItems.OBLITUS_CHESTPLATE);
                         entries.add(ModItems.OBLITUS_LEGGINGS);
                         entries.add(ModItems.OBLITUS_BOOTS);
+
+                        entries.add(ModItems.TEST_ITEM);
                     }).build());
 
     public static void registerItemGroups() {

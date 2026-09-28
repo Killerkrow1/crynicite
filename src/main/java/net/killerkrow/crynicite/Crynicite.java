@@ -3,6 +3,7 @@ package net.killerkrow.crynicite;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
+import net.killerkrow.crynicite.init.mass.*;
 import net.killerkrow.crynicite.init.*;
 import net.killerkrow.crynicite.util.PullTaskTracker;
 import net.killerkrow.crynicite.world.gen.ModWorldGeneration;
@@ -20,14 +21,7 @@ public class Crynicite implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModItems.registerModItems();
-		ModItemGroups.registerItemGroups();
-		ModBlocks.registerModBlocks();
-		ModLootTableModifiers.modifyLootTables();
-		ModParticles.registerParticles();
-		ModEnchantments.registerModEnchantments();
-		ModEntities.registerModEntities();
-		ModEffects.registerEffects();
+		MassInit.massInit();
 
 		ModWorldGeneration.generateModWorldGen();
 		ServerTickEvents.END_WORLD_TICK.register(PullTaskTracker::tick);

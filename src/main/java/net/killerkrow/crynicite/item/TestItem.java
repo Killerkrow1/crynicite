@@ -1,6 +1,5 @@
 package net.killerkrow.crynicite.item;
 
-import com.pvpranked.entity.WindChargeEntity;
 import net.killerkrow.crynicite.entities.HeartStrainEntity;
 import net.killerkrow.crynicite.entities.SpewEntity;
 import net.killerkrow.crynicite.init.ModItems;
@@ -77,9 +76,7 @@ public class TestItem extends SwordItem {
     private boolean isValidGem(ItemStack stack) {
         return stack.isOf(ModItems.CINICITE_CRYSTAL) ||
                 stack.isOf(ModItems.CRYSEUM_INGOT) ||
-                stack.isOf(ModItems.OBLITUS_STEEL) ||
-                stack.isOf(com.pvpranked.item.ModItems.WIND_CHARGE) ||
-                stack.isOf(com.pvpranked.item.ModItems.MACE);
+                stack.isOf(ModItems.OBLITUS_STEEL);
     }
 
     private void triggerAbility(World world, PlayerEntity user, NbtCompound storedNbt) {
@@ -143,40 +140,6 @@ public class TestItem extends SwordItem {
 
             user.getItemCooldownManager().set(this, 100);
             user.sendMessage(Text.literal("Heartstrain Ability Activated."), true);
-        } else if (storedStack.isOf(com.pvpranked.item.ModItems.WIND_CHARGE)) {
-            Vec3d startPos = user.getPos().add(0, user.getStandingEyeHeight() - 0.2, 0);
-            Vec3d lookDir = user.getRotationVector();
-
-            Vec3d spreadDir = new Vec3d(-lookDir.z, 0, lookDir.x).normalize();
-
-            for (int i = -3; i <= 3; i++) {
-                Vec3d spawnPos = startPos.add(spreadDir.multiply(i * 0.4));
-
-                WindChargeEntity throwableEntity = WindChargeEntity.create(user, world, user.getPos().getX(), user.getEyePos().getY(), user.getPos().getZ());
-                throwableEntity.setPos(spawnPos.x, spawnPos.y, spawnPos.z);
-                throwableEntity.setVelocity(lookDir.x * 1.5, lookDir.y * 1.5, lookDir.z * 1.5, 1.5f, 0.0f);
-
-                world.spawnEntity(throwableEntity);
-            }
-
-            user.getItemCooldownManager().set(this, 100);
-            user.sendMessage(Text.literal("Windburst Ability Activated."), true);
-        } else if (storedStack.isOf(com.pvpranked.item.ModItems.MACE)) {
-            double range = 15.0;
-            Box box = user.getBoundingBox().expand(range);
-
-            List<LivingEntity> entities = world.getEntitiesByClass(
-                    LivingEntity.class,
-                    box,
-                    entity -> entity != user
-            );
-
-            for (LivingEntity entity : entities) {
-                entity.damage(world.getDamageSources().playerAttack(user), 15.0F);
-            }
-
-            user.getItemCooldownManager().set(this, 100);
-            user.sendMessage(Text.literal("Mace Ability Activated."), true);
         }
     }
 

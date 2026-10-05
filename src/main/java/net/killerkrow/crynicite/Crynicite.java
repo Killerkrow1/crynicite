@@ -1,12 +1,9 @@
 package net.killerkrow.crynicite;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.killerkrow.crynicite.init.mass.*;
 import net.killerkrow.crynicite.init.*;
-import net.killerkrow.crynicite.util.PullTaskTracker;
-import net.killerkrow.crynicite.world.gen.ModWorldGeneration;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemStack;
@@ -22,9 +19,6 @@ public class Crynicite implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		MassInit.massInit();
-
-		ModWorldGeneration.generateModWorldGen();
-		ServerTickEvents.END_WORLD_TICK.register(PullTaskTracker::tick);
 
 		UseBlockCallback.EVENT.register((player, world, hand, hitResult) -> {
 			var blockState = world.getBlockState(hitResult.getBlockPos());

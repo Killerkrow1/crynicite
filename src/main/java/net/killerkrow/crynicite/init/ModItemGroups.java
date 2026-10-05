@@ -63,6 +63,7 @@ public class ModItemGroups {
                         entries.add(ModItems.OBLITUS_BOOTS);
 
                         entries.add(ModItems.TEST_ITEM);
+                        entries.add(ModBlocks.END_PORTAL_FRAME);
                     }).build());
 
     public static void registerItemGroups() {

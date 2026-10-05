@@ -80,10 +80,38 @@ public class OblitusScissorBlade extends SwordItem implements Vanishable {
             }
             return TypedActionResult.success(mainHand);
         }
+        if (mainHand.isOf(ModItems.OBLITUS_SCISSORBLADES_HALF) && !user.isSneaking()) {
+            ItemStack fusedItem = new ItemStack(ModItems.OBLITUS_SCISSORBLADES_FULL);
+            NbtCompound fusedNbt = new NbtCompound();
+
+            NbtList mainEnchants = mainHand.getEnchantments();
+            NbtList offEnchants = offHand.getEnchantments();
+
+            fusedNbt.put("MainHandEnchants", offEnchants);
+            fusedNbt.put("OffHandEnchants", mainEnchants);
+            fusedItem.setNbt(fusedNbt);
+
+            mainHand.decrement(1);
+            offHand.decrement(1);
+            if (!world.isClient) {
+                ItemEntity itemEntity = new ItemEntity(
+                        world,
+                        user.getX(),
+                        user.getY() + 1.0,
+                        user.getZ(),
+                        fusedItem
+                );
+
+                world.spawnEntity(itemEntity);
+
+                world.playSound(null, user.getX(), user.getY(), user.getZ(),
+                        SoundEvents.BLOCK_ANVIL_USE, SoundCategory.PLAYERS, 0.5F, 1.0F);
+            }
+            return TypedActionResult.success(mainHand);
+        }
         return TypedActionResult.pass(mainHand);
     }
 
-    // tooltip
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if (Screen.hasShiftDown()) {

@@ -1,6 +1,9 @@
 package net.killerkrow.crynicite.init.mass;
 
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.killerkrow.crynicite.init.*;
+import net.killerkrow.crynicite.util.PullTaskTracker;
+import net.killerkrow.crynicite.world.gen.ModWorldGeneration;
 
 public class MassInit {
     public static void massInit() {
@@ -12,5 +15,7 @@ public class MassInit {
         ModEnchantments.registerModEnchantments();
         ModEntities.registerModEntities();
         ModEffects.registerEffects();
+        ModWorldGeneration.generateModWorldGen();
+        ServerTickEvents.END_WORLD_TICK.register(PullTaskTracker::tick);
     }
 }

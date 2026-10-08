@@ -77,6 +77,8 @@ public class ModItems {
             new OblitusScissorBlades(CryniciteToolMaterials.OBLITUS, 6, -3.0f, new FabricItemSettings().fireproof()));
     public static final Item OBLITUS_SCISSORBLADES_HALF = registerItem("oblitus_scissorblades_half",
             new OblitusScissorBlade(CryniciteToolMaterials.OBLITUS, 5, -2.8f, new FabricItemSettings().fireproof()));
+    public static final Item OBLITUS_SCISSORBLADES_OTHER_HALF = registerItem("oblitus_scissorblades_other_half",
+            new OblitusScissorBlade(CryniciteToolMaterials.OBLITUS, 5, -2.8f, new FabricItemSettings().fireproof()));
 
     public static final Item OBLITUS_HELMET = registerItem("oblitus_helmet",
             new ArmorItem(CryniciteArmorMaterials.OBLITUS, ArmorItem.Type.HELMET, new FabricItemSettings().fireproof()));

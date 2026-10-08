@@ -7,8 +7,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -28,7 +26,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class OblitusScissorBlades extends SwordItem implements Vanishable {
-
     public OblitusScissorBlades(CryniciteToolMaterials ToolMaterials, int attackDamage, float attackSpeed, FabricItemSettings settings) {
         super(ToolMaterials, attackDamage, attackSpeed, settings);
     }
@@ -60,7 +57,7 @@ public class OblitusScissorBlades extends SwordItem implements Vanishable {
             NbtCompound tag = heldItem.getNbt();
 
             ItemStack item1 = new ItemStack(ModItems.OBLITUS_SCISSORBLADES_HALF);
-            ItemStack item2 = new ItemStack(ModItems.OBLITUS_SCISSORBLADES_HALF);
+            ItemStack item2 = new ItemStack(ModItems.OBLITUS_SCISSORBLADES_OTHER_HALF);
 
             // Take your enchantments back pwease
             if (tag.contains("MainHandEnchants")) {

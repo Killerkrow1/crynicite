@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "down": "crynicite:block/oblitus_block_bottom",
+    "up": "crynicite:block/oblitus_block_top",
+    "north": "crynicite:block/oblitus_block_side",
+    "east": "crynicite:block/oblitus_block_side",
+    "south": "crynicite:block/oblitus_block_side",
+    "west": "crynicite:block/oblitus_block_side",
+    "particle": "crynicite:block/oblitus_block_side"
+  },
+  "render_type": "solid"
+}

@@ -1,4 +1,4 @@
-package net.killerkrow.crynicite.util;
+package net.killerkrow.crynicite.init;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;

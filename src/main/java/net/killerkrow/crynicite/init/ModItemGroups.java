@@ -14,6 +14,10 @@ public class ModItemGroups {
             new Identifier(Crynicite.MOD_ID, "cryseum_ingot"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.crynicite"))
                     .icon(() -> new ItemStack(ModItems.CRYNICITE_INGOT)).entries((displayContext, entries) -> {
+                        ItemStack dual = new ItemStack(ModItems.AMETRINE_DUAL_BLADES);
+                        dual.addEnchantment(ModEnchantments.CHAINED, 1);
+                        ItemStack launch = new ItemStack(ModItems.AMETRINE_GLAIVE);
+                        launch.addEnchantment(ModEnchantments.LAUNCH, 1);
 
                         entries.add(ModItems.CRYSEUM_INGOT);
                         entries.add(ModItems.CINICITE_CRYSTAL);
@@ -44,9 +48,12 @@ public class ModItemGroups {
                         entries.add(ModItems.CITRINE_CRYSTAL);
                         entries.add(ModItems.AMETRINE_CRYSTAL);
                         entries.add(ModItems.AMETRINE_GLAIVE);
+                        entries.add(launch);
                         entries.add(ModItems.AMETRINE_DUAL_BLADES);
+                        entries.add(dual);
 
                         entries.add(ModItems.OBLITUS_STEEL);
+                        entries.add(ModBlocks.OBLITUS_BLOCK);
 
                         entries.add(ModItems.OBLITUS_CLEAVER);
                         entries.add(ModItems.OBLITUS_GREATAXE);
@@ -56,6 +63,7 @@ public class ModItemGroups {
                         entries.add(ModItems.OBLITUS_RIPPERSWORD);
                         entries.add(ModItems.OBLITUS_SCISSORBLADES_FULL);
                         entries.add(ModItems.OBLITUS_SCISSORBLADES_HALF);
+                        entries.add(ModItems.OBLITUS_SCISSORBLADES_OTHER_HALF);
 
                         entries.add(ModItems.OBLITUS_HELMET);
                         entries.add(ModItems.OBLITUS_CHESTPLATE);

@@ -47,6 +47,9 @@ public class ModBlocks {
             new EnderPortalBlock(FabricBlockSettings.copyOf(Blocks.END_PORTAL).luminance((state) -> 1)
                     .hardness(55).nonOpaque().collidable(true)));
 
+    public static final Block OBLITUS_BLOCK = registerBlock("oblitus_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, new Identifier(Crynicite.MOD_ID, name), block);

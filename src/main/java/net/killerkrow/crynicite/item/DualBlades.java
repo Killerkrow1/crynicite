@@ -1,7 +1,7 @@
 package net.killerkrow.crynicite.item;
 
 import net.killerkrow.crynicite.init.ModEnchantments;
-import net.killerkrow.crynicite.util.PullTaskTracker;
+import net.killerkrow.crynicite.init.PullTaskTracker;
 import net.killerkrow.crynicite.util.RaycastHelper;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;

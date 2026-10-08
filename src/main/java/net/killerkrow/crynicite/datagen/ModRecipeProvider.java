@@ -311,6 +311,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "eversore"));
 
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.OBLITUS_BLOCK, 1)
+                .pattern("GGG")
+                .pattern("GGG")
+                .pattern("GGG")
+                .input('G',ModItems.OBLITUS_STEEL)
+                .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_block_from"));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBLITUS_STEEL,9)
+                .input(ModBlocks.OBLITUS_BLOCK)
+                .criterion(hasItem(ModBlocks.OBLITUS_BLOCK), conditionsFromItem(ModBlocks.OBLITUS_BLOCK))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_block_to"));
 
 
         ItemConvertible cookedPyriteItem = ModItems.RAW_PYRITE;

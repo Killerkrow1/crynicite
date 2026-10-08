@@ -2,8 +2,6 @@ package net.killerkrow.crynicite.init.mass;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.killerkrow.crynicite.init.*;
-import net.killerkrow.crynicite.util.PullTaskTracker;
-import net.killerkrow.crynicite.world.gen.ModWorldGeneration;
 
 public class MassInit {
     public static void massInit() {

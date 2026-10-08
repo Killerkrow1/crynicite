@@ -38,17 +38,12 @@ public class OblitusScissorBlade extends SwordItem implements Vanishable {
     }
 
     @Override
-    public ItemStack getRecipeRemainder(ItemStack stack) {
-        return new ItemStack(this);
-    }
-
-    @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack mainHand = user.getStackInHand(hand);
         ItemStack offHand = user.getStackInHand(Hand.OFF_HAND);
 
         // HOLD THE RIGHT STUFF, AND DON'T SNEAK
-        if (offHand.isOf(ModItems.OBLITUS_SCISSORBLADES_HALF) && !user.isSneaking()) {
+        if (offHand.isOf(ModItems.OBLITUS_SCISSORBLADES_HALF) && !user.isSneaking() && mainHand.isOf(ModItems.OBLITUS_SCISSORBLADES_OTHER_HALF)) {
             ItemStack fusedItem = new ItemStack(ModItems.OBLITUS_SCISSORBLADES_FULL);
             NbtCompound fusedNbt = new NbtCompound();
 
@@ -80,10 +75,11 @@ public class OblitusScissorBlade extends SwordItem implements Vanishable {
             }
             return TypedActionResult.success(mainHand);
         }
-        if (mainHand.isOf(ModItems.OBLITUS_SCISSORBLADES_HALF) && !user.isSneaking()) {
+        if (offHand.isOf(ModItems.OBLITUS_SCISSORBLADES_OTHER_HALF) && !user.isSneaking() && mainHand.isOf(ModItems.OBLITUS_SCISSORBLADES_HALF)) {
             ItemStack fusedItem = new ItemStack(ModItems.OBLITUS_SCISSORBLADES_FULL);
             NbtCompound fusedNbt = new NbtCompound();
 
+            // Enchants get storeeeeeddddddddddd
             NbtList mainEnchants = mainHand.getEnchantments();
             NbtList offEnchants = offHand.getEnchantments();
 
@@ -91,6 +87,7 @@ public class OblitusScissorBlade extends SwordItem implements Vanishable {
             fusedNbt.put("OffHandEnchants", mainEnchants);
             fusedItem.setNbt(fusedNbt);
 
+            // Here take new item
             mainHand.decrement(1);
             offHand.decrement(1);
             if (!world.isClient) {
@@ -102,12 +99,13 @@ public class OblitusScissorBlade extends SwordItem implements Vanishable {
                         fusedItem
                 );
 
+                // Spawns the item
                 world.spawnEntity(itemEntity);
 
                 world.playSound(null, user.getX(), user.getY(), user.getZ(),
                         SoundEvents.BLOCK_ANVIL_USE, SoundCategory.PLAYERS, 0.5F, 1.0F);
             }
-            return TypedActionResult.success(mainHand);
+            return TypedActionResult.success(offHand);
         }
         return TypedActionResult.pass(mainHand);
     }

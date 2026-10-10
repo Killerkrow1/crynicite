@@ -221,14 +221,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('S',Items.NETHERITE_SWORD)
                 .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_greatsword"));
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBLITUS_RIPPERSWORD, 1)
-                .pattern("  O")
-                .pattern(" OO")
-                .pattern("T  ")
-                .input('O',ModItems.OBLITUS_STEEL)
-                .input('T',Items.NETHERITE_SWORD)
-                .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
-                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_rippersword"));
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBLITUS_SCISSORBLADES_FULL, 1)
                 .pattern("O O")
                 .pattern(" N ")
@@ -271,14 +263,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_boots"));
 
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBLITUS_CLEAVER, 1)
-                .pattern(" OO")
-                .pattern(" SO")
-                .pattern(" S ")
-                .input('O',ModItems.OBLITUS_STEEL)
-                .input('S',Items.STICK)
-                .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
-                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_cleaver"));
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBLITUS_GREATAXE, 1)
                 .pattern("OOO")
                 .pattern("OAO")
@@ -297,18 +281,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('A',Items.NETHERITE_PICKAXE)
                 .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_greatpickaxe"));
-
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TEST_ITEM, 1)
-                .pattern(" IC")
-                .pattern("ODO")
-                .pattern("AO ")
-                .input('O',ModItems.OBLITUS_STEEL)
-                .input('D',ModItems.CRYNICITE_INGOT)
-                .input('I',ModItems.CINICITE_CRYSTAL)
-                .input('C',ModItems.CRYSEUM_INGOT)
-                .input('A',ModItems.CRYNICITE_CLEAVERSWORD)
-                .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
-                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "eversore"));
 
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.OBLITUS_BLOCK, 1)

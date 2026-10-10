@@ -19,7 +19,7 @@ public class ModBlocks {
     public static final Block CRYSEUM_BLOCK = registerBlock("cryseum_block",
             new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
     public static final Block CINICITE_BLOCK = registerBlock("cinicite_block",
-            new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
+            new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.AMETHYST_BLOCK)));
     public static final Block CYNICITE_BLOCK = registerBlock("cynicite_block",
             new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
 

@@ -72,6 +72,12 @@ public class ModItemGroups {
 
                         entries.add(ModItems.TEST_ITEM);
                         entries.add(ModBlocks.END_PORTAL_FRAME);
+
+                        entries.add(ModItems.CINICITE_CORE);
+                        entries.add(ModItems.CRYSEUM_CORE);
+                        entries.add(ModItems.OBLITUS_CORE);
+                        entries.add(ModItems.PYRITE_CORE);
+                        entries.add(ModItems.AMETRINE_CORE);
                     }).build());
 
     public static void registerItemGroups() {

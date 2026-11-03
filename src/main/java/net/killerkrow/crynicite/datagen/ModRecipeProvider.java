@@ -41,9 +41,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.LAPIS_LAZULI), conditionsFromItem(Items.LAPIS_LAZULI))
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "cinicite_crystal"));
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.CRYSEUM_BLOCK, 1)
-                .pattern("GG ")
-                .pattern("GG ")
-                .pattern("   ")
+                .pattern("GGG")
+                .pattern("GGG")
+                .pattern("GGG")
                 .input('G',ModItems.CRYSEUM_INGOT)
                 .criterion(hasItem(ModItems.CRYSEUM_INGOT), conditionsFromItem(ModItems.CRYSEUM_INGOT))
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "cryseum_block_from"));
@@ -98,7 +98,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModItems.CRYSEUM_INGOT, 4)
                 .criterion(hasItem(ModItems.CRYSEUM_INGOT), conditionsFromItem(ModItems.CRYSEUM_INGOT))
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "crynicite_ingot"));
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CRYSEUM_INGOT,4)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CRYSEUM_INGOT,9)
                 .input(ModBlocks.CRYSEUM_BLOCK)
                 .criterion(hasItem(ModBlocks.CRYSEUM_BLOCK), conditionsFromItem(ModBlocks.CRYSEUM_BLOCK))
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "cryseum_block_to"));
@@ -131,9 +131,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PYRITE_CHUNK, 1)
-                .pattern("CC ")
-                .pattern("CC ")
-                .pattern("   ")
+                .pattern(" C ")
+                .pattern("CCC")
+                .pattern(" C ")
                 .input('C',ModItems.RAW_PYRITE)
                 .criterion(hasItem(ModItems.RAW_PYRITE), conditionsFromItem(ModItems.RAW_PYRITE))
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "pyrite_chunk"));
@@ -295,6 +295,39 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModBlocks.OBLITUS_BLOCK), conditionsFromItem(ModBlocks.OBLITUS_BLOCK))
                 .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_block_to"));
 
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.OBLITUS_CORE)
+                .input(ModItems.OBLITUS_STEEL, 4)
+                .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "oblitus_core"));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PYRITE_CORE)
+                .input(ModItems.RAW_PYRITE, 4)
+                .criterion(hasItem(ModItems.RAW_PYRITE), conditionsFromItem(ModItems.RAW_PYRITE))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "pyrite_core"));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.AMETRINE_CORE)
+                .input(ModItems.AMETRINE_CRYSTAL, 4)
+                .criterion(hasItem(ModItems.AMETRINE_CRYSTAL), conditionsFromItem(ModItems.AMETRINE_CRYSTAL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "ametrine_core"));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CINICITE_CORE)
+                .input(ModItems.CINICITE_CRYSTAL, 4)
+                .criterion(hasItem(ModItems.CINICITE_CRYSTAL), conditionsFromItem(ModItems.CINICITE_CRYSTAL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "cinicite_core"));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CRYSEUM_CORE)
+                .input(ModItems.CRYSEUM_INGOT, 4)
+                .criterion(hasItem(ModItems.CRYSEUM_INGOT), conditionsFromItem(ModItems.CRYSEUM_INGOT))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "cryseum_core"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.TEST_ITEM)
+                .pattern(" QT")
+                .pattern("OIO")
+                .pattern("CO ")
+                .input('O',ModItems.OBLITUS_STEEL)
+                .input('C',ModItems.CRYNICITE_CLEAVERSWORD)
+                .input('I',ModItems.CINICITE_CRYSTAL)
+                .input('Q',ModItems.CRYNICITE_INGOT)
+                .input('T',ModItems.CRYSEUM_INGOT)
+                .criterion(hasItem(ModItems.OBLITUS_STEEL), conditionsFromItem(ModItems.OBLITUS_STEEL))
+                .offerTo(exporter, new Identifier(Crynicite.MOD_ID, "eversore"));
 
         ItemConvertible cookedPyriteItem = ModItems.RAW_PYRITE;
         ItemConvertible cookedPyriteIngot = ModItems.PYRITE_INGOT;

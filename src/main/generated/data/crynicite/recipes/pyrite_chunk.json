@@ -7,9 +7,9 @@
     }
   },
   "pattern": [
-    "CC ",
-    "CC ",
-    "   "
+    " C ",
+    "CCC",
+    " C "
   ],
   "result": {
     "item": "crynicite:pyrite_chunk"

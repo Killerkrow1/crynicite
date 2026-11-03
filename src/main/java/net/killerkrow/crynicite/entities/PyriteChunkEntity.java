@@ -13,12 +13,23 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class PyriteChunkEntity extends ThrownItemEntity {
+    private int lifeTicks = 0;
     public PyriteChunkEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
         super(entityType, world);
     }
 
     public PyriteChunkEntity(World world, double x, double y, double z) {
         super(ModEntities.PYRITE_CHUNK_ENTITY, x, y, z, world);
+    }
+
+    @Override
+    public void tick() {
+        if (!this.getWorld().isClient()) {
+            lifeTicks++;
+            if (lifeTicks >= 300) {
+                this.discard(); // Poof after a minute, whatever it targets WILL be dead by then
+            }
+        }
     }
 
     @Override
@@ -49,19 +60,5 @@ public class PyriteChunkEntity extends ThrownItemEntity {
             }
             this.discard();
         }
-    }
-
-    @Override
-    public void tick() {
-        super.tick();
-        if (this.getWorld().isClient()) {
-            return;
-        }
-        // Check for the shooter
-//        Entity owner = this.getOwner();
-//        if (owner == null || owner.isRemoved()) {
-//            // Handles the missing owner safely or it will poof the item
-//            this.discard();
-//        }
     }
 }

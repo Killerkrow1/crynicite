@@ -79,5 +79,10 @@
   "tooltip.crynicite.obscissorblades.tooltip": "The full conjoined sharpened power of the Oblitus Steel.",
   "tooltip.crynicite.dualblades.tooltip": "A dual blade meant to enchain the target swiftly and skillfully.",
 
-  "item.crynicite.eversor": "Eversor"
+  "item.crynicite.eversor": "Eversor",
+  "item.crynicite.oblitus_core": "Oblitus Core",
+  "item.crynicite.pyrite_core": "Pyrite Core",
+  "item.crynicite.ametrine_core": "Ametrine Core",
+  "item.crynicite.cryseum_core": "Cryseum Core",
+  "item.crynicite.cinicite_core": "Cinicite Core"
 }

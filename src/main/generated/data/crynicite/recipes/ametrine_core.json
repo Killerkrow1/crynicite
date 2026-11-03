@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crynicite:ametrine_crystal"
+    },
+    {
+      "item": "crynicite:ametrine_crystal"
+    },
+    {
+      "item": "crynicite:ametrine_crystal"
+    },
+    {
+      "item": "crynicite:ametrine_crystal"
+    }
+  ],
+  "result": {
+    "item": "crynicite:ametrine_core"
+  }
+}

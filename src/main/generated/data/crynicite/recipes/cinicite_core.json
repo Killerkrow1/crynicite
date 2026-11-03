@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crynicite:cinicite_crystal"
+    },
+    {
+      "item": "crynicite:cinicite_crystal"
+    },
+    {
+      "item": "crynicite:cinicite_crystal"
+    },
+    {
+      "item": "crynicite:cinicite_crystal"
+    }
+  ],
+  "result": {
+    "item": "crynicite:cinicite_core"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crynicite:oblitus_steel"
+    },
+    {
+      "item": "crynicite:oblitus_steel"
+    },
+    {
+      "item": "crynicite:oblitus_steel"
+    },
+    {
+      "item": "crynicite:oblitus_steel"
+    }
+  ],
+  "result": {
+    "item": "crynicite:oblitus_core"
+  }
+}

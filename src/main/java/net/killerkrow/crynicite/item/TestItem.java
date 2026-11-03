@@ -2,10 +2,15 @@ package net.killerkrow.crynicite.item;
 
 import net.killerkrow.crynicite.entities.HeartStrainEntity;
 import net.killerkrow.crynicite.entities.SpewEntity;
+import net.killerkrow.crynicite.init.ModEffects;
 import net.killerkrow.crynicite.init.ModItems;
+import net.minecraft.block.Blocks;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.*;
@@ -13,8 +18,10 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -74,14 +81,16 @@ public class TestItem extends SwordItem {
     }
 
     private boolean isValidGem(ItemStack stack) {
-        return stack.isOf(ModItems.CINICITE_CRYSTAL) ||
-                stack.isOf(ModItems.CRYSEUM_INGOT) ||
-                stack.isOf(ModItems.OBLITUS_STEEL);
+        return stack.isOf(ModItems.CRYSEUM_CORE) ||
+                stack.isOf(ModItems.CINICITE_CORE) ||
+                stack.isOf(ModItems.OBLITUS_CORE) ||
+                stack.isOf(ModItems.AMETRINE_CORE) ||
+                stack.isOf(ModItems.PYRITE_CORE);
     }
 
     private void triggerAbility(World world, PlayerEntity user, NbtCompound storedNbt) {
         ItemStack storedStack = ItemStack.fromNbt(storedNbt);
-        if (storedStack.isOf(ModItems.CINICITE_CRYSTAL)) {
+        if (storedStack.isOf(ModItems.CINICITE_CORE)) {
             Vec3d startPos = user.getPos().add(0, user.getStandingEyeHeight() - 0.2, 0);
             Vec3d lookDir = user.getRotationVector();
 
@@ -93,6 +102,7 @@ public class TestItem extends SwordItem {
                 ThrownItemEntity throwableEntity = new SpewEntity(world, user.getX(), user.getY()+1.5 - 0.0D, user.getZ());
                 throwableEntity.setPos(spawnPos.x, spawnPos.y, spawnPos.z);
                 throwableEntity.setVelocity(lookDir.x * 1.5, lookDir.y * 1.5, lookDir.z * 1.5, 1.5f, 0.0f);
+                throwableEntity.setOwner(user);
 
                 world.spawnEntity(throwableEntity);
             }
@@ -100,10 +110,9 @@ public class TestItem extends SwordItem {
             world.playSound(null, user.getX(), user.getY(), user.getZ(),
                     SoundEvents.ENTITY_ARROW_SHOOT, SoundCategory.PLAYERS, 1.0F, 1.0F);
 
-            user.getItemCooldownManager().set(this, 100);
-            user.sendMessage(Text.literal("Shatter Shard Ability Activated."), true);
+            user.sendMessage(Text.literal("Cinicite Shatter Shard Ability Activated."), true);
 
-        } else if (storedStack.isOf(ModItems.CRYSEUM_INGOT)) {
+        } else if (storedStack.isOf(ModItems.CRYSEUM_CORE)) {
             // Casually theives from the Paradigm Mod :3
             double radius = 10.0D;
             Box boundingBox = user.getBoundingBox().expand(radius);
@@ -119,10 +128,9 @@ public class TestItem extends SwordItem {
 
                 entity.velocityModified = true;
             }
-            user.getItemCooldownManager().set(this, 100);
-            user.sendMessage(Text.literal("Repulse Ability Activated."), true);
+            user.sendMessage(Text.literal("Cryseum Repulse Ability Activated."), true);
 
-        } else if (storedStack.isOf(ModItems.OBLITUS_STEEL)) {
+        } else if (storedStack.isOf(ModItems.OBLITUS_CORE)) {
             Vec3d startPos = user.getPos().add(0, user.getStandingEyeHeight() - 0.2, 0);
             Vec3d lookDir = user.getRotationVector();
 
@@ -134,23 +142,63 @@ public class TestItem extends SwordItem {
                 ThrownItemEntity throwableEntity = new HeartStrainEntity(world, user.getX(), user.getY()+1.5 - 0.0D, user.getZ());
                 throwableEntity.setPos(spawnPos.x, spawnPos.y, spawnPos.z);
                 throwableEntity.setVelocity(lookDir.x * 1.5, lookDir.y * 1.5, lookDir.z * 1.5, 1.5f, 0.0f);
+                throwableEntity.setOwner(user);
 
                 world.spawnEntity(throwableEntity);
             }
 
-            user.getItemCooldownManager().set(this, 100);
-            user.sendMessage(Text.literal("Heartstrain Ability Activated."), true);
+            user.sendMessage(Text.literal("Oblitus Heartstrain Ability Activated."), true);
+        } else if (storedStack.isOf(ModItems.PYRITE_CORE)) {
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 600, 0));
+
+            BlockPos playerPos = user.getBlockPos();
+            int radius = 2;
+
+            for (int x = -radius; x <= radius; x++) {
+                for (int z = -radius; z <= radius; z++) {
+                    for (int y = -1; y <= 1; y++) {
+                        BlockPos targetPos = playerPos.add(x, y, z);
+                        if (world.isAir(targetPos) && world.getBlockState(targetPos.down()).isOpaque()) {
+                            world.setBlockState(targetPos, Blocks.FIRE.getDefaultState());
+                        }
+                    }
+                }
+            }
+
+            Vec3d velocity = user.getVelocity();
+            double horizontalSpeed = Math.sqrt(velocity.x * velocity.x + velocity.z * velocity.z);
+
+            if (horizontalSpeed > 0.01) {
+                double boostMultiplier = 2.5;
+                double motionX = (velocity.x / horizontalSpeed) * boostMultiplier;
+                double motionZ = (velocity.z / horizontalSpeed) * boostMultiplier;
+
+                user.setVelocity(motionX, velocity.y, motionZ);
+                user.velocityModified = true;
+            }
+
+            user.sendMessage(Text.literal("Pyrite Dash Ability Activated."), true);
+        } else if (storedStack.isOf(ModItems.AMETRINE_CORE)) {
+            user.addStatusEffect(new StatusEffectInstance(ModEffects.SPIRITED, 120, 0,
+                    false, false, false));
+
+            user.sendMessage(Text.literal("Ametrine Spirit Ability Activated."), true);
         }
+        user.getItemCooldownManager().set(this, 100);
     }
 
     @Override
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
         NbtCompound nbt = stack.getNbt();
-        if (nbt != null && nbt.contains("StoredItem")) {
-            ItemStack stored = ItemStack.fromNbt(nbt.getCompound("StoredItem"));
-            tooltip.add(Text.literal("Engraved Item: ").append(stored.getName()));
+        if (Screen.hasShiftDown()) {
+            if (nbt != null && nbt.contains("StoredItem")) {
+                ItemStack stored = ItemStack.fromNbt(nbt.getCompound("StoredItem"));
+                tooltip.add(Text.literal("Engraved Item: ").append(stored.getName()));
+            } else {
+                tooltip.add(Text.literal("Engraved Item: NONE"));
+            }
         } else {
-            tooltip.add(Text.literal("Engraved Item: NONE"));
+            tooltip.add(Text.literal("[SHIFT]").formatted(Formatting.DARK_GRAY));
         }
         super.appendTooltip(stack, world, tooltip, context);
     }

@@ -18,12 +18,26 @@ import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.world.World;
 
 public class SpewEntity extends ThrownItemEntity {
+    private int ticksAlive = 0;
+    private static final int MAX_AGE = 1200;
     public SpewEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
         super(entityType, world);
     }
 
     public SpewEntity(World world, double x, double y, double z) {
         super(ModEntities.SPEW_ENTITY, x, y, z, world);
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+
+        if (!this.getWorld().isClient) {
+            this.ticksAlive++;
+            if (this.ticksAlive >= MAX_AGE) {
+                this.discard();
+            }
+        }
     }
 
     @Override

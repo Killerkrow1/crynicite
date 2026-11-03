@@ -90,6 +90,18 @@ public class ModItems {
             new ArmorItem(CryniciteArmorMaterials.OBLITUS, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof()));
 
 
+    public static final Item OBLITUS_CORE = registerItem("oblitus_core",
+            new Item(new FabricItemSettings().fireproof().maxCount(1)));
+    public static final Item PYRITE_CORE = registerItem("pyrite_core",
+            new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item AMETRINE_CORE = registerItem("ametrine_core",
+            new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item CRYSEUM_CORE = registerItem("cryseum_core",
+            new Item(new FabricItemSettings().maxCount(1)));
+    public static final Item CINICITE_CORE = registerItem("cinicite_core",
+            new Item(new FabricItemSettings().maxCount(1)));
+
+
     public static final Item TEST_ITEM = registerItem("eversor",
             new TestItem(ToolMaterials.DIAMOND, 3, -2.4f, new FabricItemSettings()));
 

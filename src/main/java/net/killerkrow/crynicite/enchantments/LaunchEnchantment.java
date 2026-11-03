@@ -20,4 +20,17 @@ public class LaunchEnchantment extends Enchantment {
     public int getMaxLevel() {
         return 1;
     }
+
+
+    // Hides from the enchantment table
+    @Override
+    public boolean isTreasure() {
+        return true;
+    }
+
+    // hides from general loot and mob loot
+    @Override
+    public boolean isAvailableForRandomSelection() {
+        return false;
+    }
 }

@@ -7,9 +7,9 @@
     }
   },
   "pattern": [
-    "GG ",
-    "GG ",
-    "   "
+    "GGG",
+    "GGG",
+    "GGG"
   ],
   "result": {
     "item": "crynicite:cryseum_block"

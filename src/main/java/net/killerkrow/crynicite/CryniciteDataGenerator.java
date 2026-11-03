@@ -17,6 +17,7 @@ public class CryniciteDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModRecipeProvider::new);
 		pack.addProvider(ModWorldGenerator::new);
 		pack.addProvider(ModItemTagProvider::new);
+		pack.addProvider(ModModelProvider::new);
 	}
 
 	@Override

@@ -1,11 +1,14 @@
 package net.killerkrow.crynicite;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
+import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.killerkrow.crynicite.init.mass.*;
 import net.killerkrow.crynicite.init.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
@@ -39,6 +42,21 @@ public class Crynicite implements ModInitializer {
 			}
 
 			return ActionResult.PASS;
+		});
+
+		AttackEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
+			if (player.hasStatusEffect(ModEffects.SPIRITED)) {
+				return ActionResult.FAIL; // Cancels damage dealt to others
+			}
+			return ActionResult.PASS;
+		});
+		ServerLivingEntityEvents.ALLOW_DAMAGE.register((entity, source, amount) -> {
+			if (entity instanceof PlayerEntity player) {
+				if (player.hasStatusEffect(ModEffects.SPIRITED)) {
+					return false; // Cancels damage dealt to one
+				}
+			}
+			return true;
 		});
 	}
 

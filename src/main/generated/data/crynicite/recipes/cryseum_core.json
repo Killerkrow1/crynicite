@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "crynicite:cryseum_ingot"
+    },
+    {
+      "item": "crynicite:cryseum_ingot"
+    },
+    {
+      "item": "crynicite:cryseum_ingot"
+    },
+    {
+      "item": "crynicite:cryseum_ingot"
+    }
+  ],
+  "result": {
+    "item": "crynicite:cryseum_core"
+  }
+}
